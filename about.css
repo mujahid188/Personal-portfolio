@@ -1,0 +1,2657 @@
+/*Responsive for all screens*/
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Courgette&family=Heebo:wght@600&family=Josefin+Sans:wght@300;600;700&family=Kalam&family=Karla:wght@700&family=Kaushan+Script&family=Merriweather+Sans:wght@800&family=Montserrat:wght@500;600&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Odibee+Sans&family=Raleway:wght@700;900&family=Roboto:wght@300;400;500;700;900&family=Russo+One&family=Secular+One&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    position: fixed;
+    width: 280px;
+    height: 653px;
+    background: linear-gradient(to top left,#dfdeef,#b6c6e1);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #082032;
+}
+.press{
+    position: absolute;
+    top: 20px;left: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 1px #a5a0a0,0px 0px 0px 3px #131317,
+    5px 5px 9px #75787c,-5px -5px 9px #ffffff;
+    background-color: #2b2c3e;
+    border: none;
+    cursor: pointer;
+}
+.icon{
+    color: white;
+    font-size: 20px;
+}
+.circle-small{
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to top left,#a6b2ec,#ffffff);
+}
+.circle-big{
+    position: absolute;
+    top: 520px;
+    left: -30px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(to top left,#a6b2ec,#ffffff);
+}
+.circle-big2{
+    position: relative;
+    top: 510px;
+    left: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to top left,#a6b2ec,#ffffff);
+}
+.circle-big3{
+    position: relative;
+    top: 220px;
+    left: 180px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(to top left,#a6b2ec,#ffffff);
+}
+.about-me{
+    position: relative;
+    top: -105px;
+    left: 80px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.front-end{
+    position: relative;
+    text-align: justify;
+    top: -86px;
+    left: 15px;
+    width: 250px;
+    font-size: 14px;
+}
+.executing{
+    text-align: justify;
+    position: relative;
+    top: -56px;
+    left: 15px;
+    width: 250px;
+    font-size: 14px;
+}
+.free-time{
+    position: relative;
+    text-align: justify;
+    left: 15px;
+    top: -26px;
+    width: 250px;
+    font-size: 14px;
+}
+.access{
+    text-decoration: none;    
+    color: #2b2c3e;
+    font-weight: 700;
+    font-size: 16px;
+}
+.access:active{
+    color: #082032;
+}
+
+
+@media screen and (min-width: 320px){
+    body{
+        width: 320px;  
+        height: 480px;
+        position: fixed;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big{
+        top: 400px;
+        left: -30px;
+        width: 170px;
+        height: 170px;
+    }
+    .circle-big2{
+        top: 388px;
+        left: 40px;
+        width: 110px;
+        height: 110px;
+    }
+    .circle-big3{
+        top: 160px;
+        left: 180px;
+        width: 94px;
+        height: 94px;
+    }
+    .about-me{
+        top: -150px;
+        left: 86px;
+        font-size: 34px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -135px;
+        left: 25px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .executing{
+        top: -110px;
+        left: 25px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .free-time{
+        left: 25px;
+        top: -85px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .access{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 320px) and (min-height: 533px){
+    body{
+        width: 320px;  
+        height: 533px;
+        position: fixed;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big{
+        top: 410px;
+        left: -30px;
+        width: 170px;
+        height: 170px;
+    }
+    .circle-big2{
+        top: 400px;
+        left: 45px;
+        width: 110px;
+        height: 110px;
+    }
+    .circle-big3{
+        top: 160px;
+        left: 180px;
+        width: 94px;
+        height: 94px;
+    }
+    .about-me{
+        top: -142px;
+        left: 86px;
+        font-size: 34px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -125px;
+        left: 25px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .executing{
+        top: -94px;
+        left: 25px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .free-time{
+        left: 25px;
+        top: -65px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .access{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 320px) and (min-height: 568px){
+    body{
+        width: 320px;  
+        height: 568px;
+        position: fixed;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big{
+        top: 440px;
+        left: -30px;
+        width: 170px;
+        height: 170px;
+    }
+    .circle-big2{
+        top: 430px;
+        left: 45px;
+        width: 110px;
+        height: 110px;
+    }
+    .circle-big3{
+        top: 160px;
+        left: 180px;
+        width: 94px;
+        height: 94px;
+    }
+    .about-me{
+        top: -140px;
+        left: 86px;
+        font-size: 34px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -125px;
+        left: 25px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .executing{
+        top: -95px;
+        left: 25px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .free-time{
+        left: 25px;
+        top: -65px;
+        width: 270px;
+        font-size: 13px;
+    }
+    .access{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 320px) and (min-height: 658px){
+    body{
+        width: 320px;  
+        height: 658px;
+        position: fixed;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big{
+        top: 520px;
+        left: -30px;
+        width: 170px;
+        height: 170px;
+    }
+    .circle-big2{
+        top: 510px;
+        left: 50px;
+        width: 110px;
+        height: 110px;
+    }
+    .circle-big3{
+        top: 220px;
+        left: 180px;
+        width: 94px;
+        height: 94px;
+    }
+    .about-me{
+        top: -135px;
+        left: 80px;
+        font-size: 38px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -115px;
+        left: 25px;
+        width: 270px;
+        font-size: 15px;
+    }
+    .executing{
+        top: -85px;
+        left: 25px;
+        width: 270px;
+        font-size: 15px;
+    }
+    .free-time{
+        left: 25px;
+        top: -52px;
+        width: 270px;
+        font-size: 15px;
+    }
+    .access{
+        font-size: 16.5px;
+    }
+}
+
+@media screen and (min-width: 353px){
+    body{
+        width: 353px;  
+        height: 745px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 30px;
+        height: 30px;
+        font-size: 26px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 22px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 135px;
+        height: 135px;
+    }
+    .circle-big{
+        top: 590px;
+        left: -30px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big2{
+        top: 576px;
+        left: 58px;
+        width: 130px;
+        height: 130px;
+    }
+    .circle-big3{
+        top: 220px;
+        left: 200px;
+        width: 120px;
+        height: 120px;
+    }
+    .about-me{
+        top: -166px;
+        left: 80px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -145px;
+        left: 25px;
+        width: 300px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -106px;
+        left: 25px;
+        width: 300px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -72px;
+        width: 300px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 360px){
+    body{
+        width: 353px;  
+        height: 640px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 125px;
+        height: 125px;
+    }
+    .circle-big{
+        top: 490px;
+        left: -40px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big2{
+        top: 478px;
+        left: 58px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big3{
+        top: 180px;
+        left: 200px;
+        width: 100px;
+        height: 100px;
+    }
+    .about-me{
+        top: -144px;
+        left: 100px;
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -120px;
+        left: 25px;
+        width: 310px;
+        font-size: 14px;
+    }
+    .executing{
+        top: -90px;
+        left: 25px;
+        width: 310px;
+        font-size: 14px;
+    }
+    .free-time{
+        left: 25px;
+        top: -60px;
+        width: 310px;
+        font-size: 14px;
+    }
+    .access{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 360px) and (min-height: 740px){
+    body{
+        width: 360px;  
+        height: 740px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 135px;
+        height: 135px;
+    }
+    .circle-big{
+        top: 580px;
+        left: -30px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big2{
+        top: 566px;
+        left: 64px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big3{
+        top: 220px;
+        left: 200px;
+        width: 120px;
+        height: 120px;
+    }
+    .about-me{
+        top: -168px;
+        left: 84px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -145px;
+        left: 25px;
+        width: 310px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -109px;
+        left: 25px;
+        width: 310px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -72px;
+        width: 310px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 375px){
+    body{
+        width: 375px;  
+        height: 667px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 135px;
+        height: 135px;
+    }
+    .circle-big{
+        top: 510px;
+        left: -40px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big2{
+        top: 498px;
+        left: 60px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big3{
+        top: 190px;
+        left: 220px;
+        width: 120px;
+        height: 120px;
+    }
+    .about-me{
+        top: -182px;
+        left: 94px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -165px;
+        left: 25px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -134px;
+        left: 25px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -102px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 375px) and (min-height: 812px){
+    body{
+        width: 375px;  
+        height: 812px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 130px;
+        width: 135px;
+        height: 135px;
+    }
+    .circle-big{
+        top: 640px;
+        left: -40px;
+        width: 220px;
+        height: 220px;
+    }
+    .circle-big2{
+        top: 628px;
+        left: 62px;
+        width: 136px;
+        height: 136px;
+    }
+    .circle-big3{
+        top: 240px;
+        left: 200px;
+        width: 120px;
+        height: 120px;
+    }
+    .about-me{
+        top: -160px;
+        left: 94px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -135px;
+        left: 25px;
+        width: 325px;
+        line-height: 26px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -94px;
+        left: 25px;
+        line-height: 26px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -54px;
+        line-height: 26px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 384px){
+    body{
+        width: 384px;  
+        height: 640px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 135px;
+        height: 135px;
+    }
+    .circle-big{
+        top: 490px;
+        left: -30px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big2{
+        top: 478px;
+        left: 66px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big3{
+        top: 170px;
+        left: 220px;
+        width: 120px;
+        height: 120px;
+    }
+    .about-me{
+        top: -184px;
+        left: 94px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -165px;
+        left: 25px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -134px;
+        left: 25px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -102px;
+        width: 325px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 390px){
+    body{
+        width: 390px;  
+        height: 844px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 660px;
+        left: -40px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 646px;
+        left: 66px;
+        width: 140px;
+        height: 140px;
+    }
+    .circle-big3{
+        top: 230px;
+        left: 210px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -180px;
+        left: 100px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -155px;
+        left: 25px;
+        line-height: 29px;
+        width: 340px;
+        font-size: 18px;
+    }
+    .executing{
+        top: -110px;
+        left: 25px;
+        line-height: 29px;
+        width: 340px;
+        font-size: 18px;
+    }
+    .free-time{
+        left: 25px;
+        top: -66px;
+        line-height: 29px;
+        width: 340px;
+        font-size: 18px;
+    }
+    .access{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 393px){
+    body{
+        width: 393px;  
+        height: 786px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 610px;
+        left: -40px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 594px;
+        left: 68px;
+        width: 140px;
+        height: 140px;
+    }
+    .circle-big3{
+        top: 200px;
+        left: 210px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -180px;
+        left: 100px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -155px;
+        left: 25px;
+        width: 342px;
+        font-size: 18px;
+    }
+    .executing{
+        top: -120px;
+        left: 25px;
+        width: 342px;
+        font-size: 18px;
+    }
+    .free-time{
+        left: 25px;
+        top: -86px;
+        width: 342px;
+        font-size: 18px;
+    }
+    .access{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 393px) and (min-height: 851px){
+    body{
+        width: 393px;  
+        height: 851px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        box-shadow: 0px 0px 2px #a5a0a0,0px 0px 0px 4px #131317,
+        6px 6px 12px #75787c,-6px -6px 12px #ffffff;
+    }
+    .icon{
+        font-size: 24px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 670px;
+        left: -40px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 656px;
+        left: 68px;
+        width: 140px;
+        height: 140px;
+    }
+    .circle-big3{
+        top: 210px;
+        left: 210px;
+        width: 140px;
+        height: 140px;
+    }
+    .about-me{
+        top: -184px;
+        left: 100px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -155px;
+        left: 25px;
+        width: 342px;
+        font-size: 18px;
+    }
+    .executing{
+        top: -110px;
+        left: 25px;
+        width: 342px;
+        font-size: 18px;
+    }
+    .free-time{
+        left: 25px;
+        top: -66px;
+        width: 342px;
+        font-size: 18px;
+    }
+    .access{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 411px){
+    body{
+        width: 411px;  
+        height: 731px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        box-shadow: 0px 0px 3px #a5a0a0,0px 0px 0px 5px #131317,
+        8px 8px 15px #75787c,-8px -8px 15px #ffffff;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 560px;
+        left: -50px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 550px;
+        left: 65px;
+        width: 130px;
+        height: 130px;
+    }
+    .circle-big3{
+        top: 190px;
+        left: 230px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -195px;
+        left: 110px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -175px;
+        left: 25px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -150px;
+        left: 25px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -122px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 411px) and (min-height:823px){
+    body{
+        width: 411px;  
+        height: 823px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        box-shadow: 0px 0px 4px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 640px;
+        left: -50px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 630px;
+        left: 68px;
+        width: 130px;
+        height: 130px;
+    }
+    .circle-big3{
+        top: 190px;
+        left: 230px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -190px;
+        left: 108px;
+        font-size: 44px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -165px;
+        left: 25px;
+        width: 361px;
+        font-size: 19px;
+    }
+    .executing{
+        top: -130px;
+        left: 25px;
+        width: 361px;
+        font-size: 19px;
+    }
+    .free-time{
+        left: 25px;
+        top: -95px;
+        width: 361px;
+        font-size: 19px;
+    }
+    .access{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 412px){
+    body{
+        width: 412px;  
+        height: 732px;
+        position: fixed;
+    }
+    .press{
+        top: 26px;left: 26px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        box-shadow: 0px 0px 4px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 560px;
+        left: -40px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 550px;
+        left: 75px;
+        width: 130px;
+        height: 130px;
+    }
+    .circle-big3{
+        top: 190px;
+        left: 230px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -200px;
+        left: 110px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -180px;
+        left: 25px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -150px;
+        left: 25px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -120px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 412px) and (min-height: 914px){
+    body{
+        width: 412px;  
+        height: 914px;
+        position: fixed;
+    }
+    .press{
+        top: 28px;left: 28px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        box-shadow: 0px 0px 4px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 140px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 740px;
+        left: -40px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 724px;
+        left: 72px;
+        width: 130px;
+        height: 130px;
+    }
+    .circle-big3{
+        top: 280px;
+        left: 230px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -180px;
+        left: 108px;
+        font-size: 44px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -155px;
+        left: 35px;
+        width: 340px;
+        font-size: 19px;
+    }
+    .executing{
+        top: -118px;
+        left: 35px;
+        width: 340px;
+        font-size: 19px;
+    }
+    .free-time{
+        left: 35px;
+        top: -80px;
+        width: 340px;
+        font-size: 19px;
+    }
+    .access{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 414px){
+    body{
+        width: 414px;  
+        height: 736px;
+        position: fixed;
+    }
+    .press{
+        top: 28px;left: 28px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        box-shadow: 0px 0px 4px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 100px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 560px;
+        left: -50px;
+        width: 240px;
+        height: 240px;
+    }
+    .circle-big2{
+        top: 550px;
+        left: 72px;
+        width: 134px;
+        height: 134px;
+    }
+    .circle-big3{
+        top: 190px;
+        left: 230px;
+        width: 132px;
+        height: 132px;
+    }
+    .about-me{
+        top: -200px;
+        left: 110px;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -175px;
+        left: 25px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .executing{
+        top: -144px;
+        left: 25px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .free-time{
+        left: 25px;
+        top: -110px;
+        width: 361px;
+        font-size: 17px;
+    }
+    .access{
+        font-size: 19px;
+    }
+}
+
+
+
+@media screen and (min-width: 414px) and (min-height: 896px){
+    body{
+        width: 414px;  
+        height: 896px;
+        position: fixed;
+    }
+    .press{
+        top: 32px;left: 32px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        box-shadow: 0px 0px 4px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 140px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 720px;
+        left: -40px;
+        width: 230px;
+        height: 230px;
+    }
+    .circle-big2{
+        top: 708px;
+        left: 68px;
+        width: 134px;
+        height: 134px;
+    }
+    .circle-big3{
+        top: 270px;
+        left: 230px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -170px;
+        left: 108px;
+        font-size: 44px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -145px;
+        left: 35px;
+        width: 340px;
+        font-size: 19px;
+    }
+    .executing{
+        top: -108px;
+        left: 35px;
+        width: 340px;
+        font-size: 19px;
+    }
+    .free-time{
+        left: 35px;
+        top: -70px;
+        width: 340px;
+        font-size: 19px;
+    }
+    .access{
+        font-size: 21px;
+    }
+}
+
+
+@media screen and (min-width: 480px){
+    body{
+        width: 480px;  
+        height: 854px;
+        position: fixed;
+    }
+    .press{
+        top: 34px;left: 34px;
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+        box-shadow: 0px 0px 5px #a5a0a0,0px 0px 0px 7px #131317,
+        11px 11px 21px #75787c,-11px -11px 21px #ffffff;
+    }
+    .icon{
+        font-size: 34px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 140px;
+        width: 155px;
+        height: 155px;
+    }
+    .circle-big{
+        top: 660px;
+        left: -40px;
+        width: 250px;
+        height: 250px;
+    }
+    .circle-big2{
+        top: 648px;
+        left: 74px;
+        width: 154px;
+        height: 154px;
+    }
+    .circle-big3{
+        top: 250px;
+        left: 280px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -174px;
+        left: 135px;
+        font-size: 48px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -145px;
+        left: 35px;
+        width: 410px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .executing{
+        top: -108px;
+        left: 35px;
+        width: 410px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .free-time{
+        left: 35px;
+        top: -70px;
+        width: 410px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .access{
+        font-size: 22px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 540px){
+    body{
+        width: 540px;  
+        height: 720px;
+        position: fixed;
+    }
+    .press{
+        top: 34px;left: 34px;
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+        box-shadow: 0px 0px 5px #a5a0a0,0px 0px 0px 7px #131317,
+        11px 11px 21px #75787c,-11px -11px 21px #ffffff;
+    }
+    .icon{
+        font-size: 34px;
+    }
+    .circle-small{
+        left: 30px;
+        top: 100px;
+        width: 170px;
+        height: 170px;
+    }
+    .circle-big{
+        top: 510px;
+        left: -50px;
+        width: 260px;
+        height: 260px;
+    }
+    .circle-big2{
+        top: 500px;
+        left: 75px;
+        width: 154px;
+        height: 154px;
+    }
+    .circle-big3{
+        top: 180px;
+        left: 350px;
+        width: 130px;
+        height: 130px;
+    }
+    .about-me{
+        top: -180px;
+        left: 148px;
+        font-size: 48px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -160px;
+        left: 35px;
+        width: 470px;
+        font-size: 19px;
+    }
+    .executing{
+        top: -130px;
+        left: 35px;
+        width: 470px;
+        font-size: 19px;
+    }
+    .free-time{
+        left: 35px;
+        top: -98px;
+        width: 470px;
+        font-size: 19px;
+    }
+    .access{
+        font-size: 21px;
+    }
+}
+
+
+@media screen and (min-width: 600px){
+    body{
+        width: 600px;  
+        height: 960px;
+        position: fixed;
+    }
+    .press{
+        top: 38px;left: 38px;
+        width: 52px;
+        height: 52px;
+        font-size: 15px;
+        box-shadow: 0px 0px 6px #a5a0a0,0px 0px 0px 8px #131317,
+        12px 12px 24px #75787c,-12px -12px 24px #ffffff;
+    }
+    .icon{
+        font-size: 38px;
+    }
+    .circle-small{
+        left: 20px;
+        top: 140px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big{
+        top: 730px;
+        left: -50px;
+        width: 290px;
+        height: 290px;
+    }
+    .circle-big2{
+        top: 715px;
+        left: 95px;
+        width: 170px;
+        height: 170px;
+    }
+    .circle-big3{
+        top: 260px;
+        left: 350px;
+        width: 155px;
+        height: 155px;
+    }
+    .about-me{
+        top: -180px;
+        left: 165px;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -150px;
+        left: 45px;
+        width: 510px;
+        line-height: 38px;
+        font-size: 22px;
+    }
+    .executing{
+        top: -105px;
+        left: 45px;
+        width: 510px;
+        line-height: 38px;
+        font-size: 22px;
+    }
+    .free-time{
+        left: 45px;
+        top: -62px;
+        width: 510px;
+        line-height: 38px;
+        font-size: 22px;
+    }
+    .access{
+        font-size: 24px;
+    }
+}
+
+
+
+@media screen and (min-width: 600px) and (min-height: 1024px){
+    body{
+        width: 600px;  
+        height: 1024px;
+        position: fixed;
+    }
+    .press{
+        top: 38px;left: 38px;
+        width: 52px;
+        height: 52px;
+        font-size: 15px;
+        box-shadow: 0px 0px 6px #a5a0a0,0px 0px 0px 8px #131317,
+        12px 12px 24px #75787c,-12px -12px 24px #ffffff;
+    }
+    .icon{
+        font-size: 38px;
+    }
+    .circle-small{
+        left: 40px;
+        top: 170px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big{
+        top: 790px;
+        left: -50px;
+        width: 320px;
+        height: 320px;
+    }
+    .circle-big2{
+        top: 770px;
+        left: 110px;
+        width: 180px;
+        height: 180px;
+    }
+    .circle-big3{
+        top: 300px;
+        left: 350px;
+        width: 150px;
+        height: 150px;
+    }
+    .about-me{
+        top: -200px;
+        left: 175px;
+        font-size: 56px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -165px;
+        left: 35px;
+        width: 530px;
+        font-size: 24px;
+    }
+    .executing{
+        top: -120px;
+        left: 35px;
+        width: 530px;
+        font-size: 24px;
+    }
+    .free-time{
+        left: 35px;
+        top: -76px;
+        width: 530px;
+        font-size: 24px;
+    }
+    .access{
+        font-size: 26px;
+    }
+}
+
+
+@media screen and (min-width: 640px) and (min-height: 360px){
+    body{
+        width: 640px;  
+        height: 360px;
+        position: fixed;
+    }
+    .press{
+        top: 24px;left: 24px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+        box-shadow: 0px 0px 3px #a5a0a0,0px 0px 0px 5px #131317,
+        8px 8px 15px #75787c,-8px -8px 15px #ffffff;
+    }
+    .icon{
+        font-size: 28px;
+    }
+    .circle-small{
+        left: 420px;
+        top: -1px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle-big{
+        top: 190px;
+        left: -35px;
+        width: 220px;
+        height: 220px;
+    }
+    .circle-big2{
+        top: 260px;
+        left: 120px;
+        width: 110px;
+        height: 110px;
+    }
+    .circle-big3{
+        top: 300px;
+        left: 350px;
+        width: 150px;
+        height: 150px;
+    }
+    .about-me{
+        top: -230px;
+        left: 190px;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -220px;
+        left: 110px;
+        width: 290px;
+        line-height: 19px;
+        font-size: 13px;
+    }
+    .executing{
+        top: -195px;
+        line-height: 19px;
+        left: 200px;
+        width: 310px;
+        font-size: 13px;
+    }
+    .free-time{
+        left: 260px;
+        line-height: 19px;
+        top: -170px;
+        width: 340px;
+        font-size: 13px;
+    }
+    .access{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (min-width: 712px){
+    body{
+        width: 712px;  
+        height: 1138px;
+        position: fixed;
+    }
+    .press{
+        top: 42px;left: 42px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 6px #a5a0a0,0px 0px 0px 8px #131317,
+        12px 12px 24px #75787c,-12px -12px 24px #ffffff;
+    }
+    .icon{
+        font-size: 44px;
+    }
+    .circle-small{
+        left: 50px;
+        top: 170px;
+        width: 240px;
+        height: 240px;
+    }
+    .circle-big{
+        top: 860px;
+        left: -50px;
+        width: 350px;
+        height: 350px;
+    }
+    .circle-big2{
+        top: 840px;
+        left: 120px;
+        width: 210px;
+        height: 210px;
+    }
+    .circle-big3{
+        top: 300px;
+        left: 400px;
+        width: 190px;
+        height: 190px;
+    }
+    .about-me{
+        top: -250px;
+        left: 195px;
+        font-size: 70px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -215px;
+        left: 51px;
+        line-height: 42px;
+        width: 610px;
+        font-size: 28px;
+    }
+    .executing{
+        top: -170px;
+        left: 51px;
+        width: 610px;
+        line-height: 42px;
+        font-size: 28px;
+    }
+    .free-time{
+        left: 51px;
+        top: -126px;
+        width: 610px;
+        line-height: 42px;
+        font-size: 28px;
+    }
+    .access{
+        font-size: 30px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px){
+    body{
+        width: 768px;  
+        height: 1024px;
+        position: fixed;
+    }
+    .press{
+        top: 48px;left: 48px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 6px #a5a0a0,0px 0px 0px 8px #131317,
+        12px 12px 24px #75787c,-12px -12px 24px #ffffff;
+    }
+    .icon{
+        font-size: 44px;
+    }
+    .circle-small{
+        left: 50px;
+        top: 170px;
+        width: 240px;
+        height: 240px;
+    }
+    .circle-big{
+        top: 770px;
+        left: -50px;
+        width: 340px;
+        height: 340px;
+    }
+    .circle-big2{
+        top: 754px;
+        left: 125px;
+        width: 190px;
+        height: 190px;
+    }
+    .circle-big3{
+        top: 300px;
+        left: 430px;
+        width: 180px;
+        height: 180px;
+    }
+    .about-me{
+        top: -260px;
+        left: 214px;
+        font-size: 70px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -220px;
+        left: 54px;
+        width: 660px;
+        font-size: 28px;
+    }
+    .executing{
+        top: -172px;
+        left: 54px;
+        width: 660px;
+        font-size: 28px;
+    }
+    .free-time{
+        left: 54px;
+        top: -126px;
+        width: 660px;
+        font-size: 28px;
+    }
+    .access{
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (min-width: 800px){
+    body{
+        width: 800px;  
+        height: 1280px;
+        position: fixed;
+    }
+    .press{
+        top: 46px;left: 46px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 6px #a5a0a0,0px 0px 0px 8px #131317,
+        12px 12px 24px #75787c,-12px -12px 24px #ffffff;
+    }
+    .icon{
+        font-size: 44px;
+    }
+    .circle-small{
+        left: 50px;
+        top: 170px;
+        width: 240px;
+        height: 240px;
+    }
+    .circle-big{
+        top: 980px;
+        left: -50px;
+        width: 380px;
+        height: 380px;
+    }
+    .circle-big2{
+        top: 960px;
+        left: 140px;
+        width: 220px;
+        height: 220px;
+    }
+    .circle-big3{
+        top: 330px;
+        left: 450px;
+        width: 200px;
+        height: 200px;
+    }
+    .about-me{
+        top: -250px;
+        left: 230px;
+        font-size: 72px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -210px;
+        left: 55px;
+        width: 690px;
+        line-height: 46px;
+        font-size: 32px;
+    }
+    .executing{
+        top: -150px;
+        left: 55px;
+        width: 690px;
+        line-height: 46px;
+        font-size: 32px;
+    }
+    .free-time{
+        left: 55px;
+        top: -90px;
+        width: 690px;
+        line-height: 46px;
+        font-size: 32px;
+    }
+    .access{
+        font-size: 34px;
+    }
+}
+
+
+
+@media screen and (min-width: 820px){
+    body{
+        width: 820px;  
+        height: 1180px;
+        position: fixed;
+    }
+    .press{
+        top: 50px;left: 50px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 6px #a5a0a0,0px 0px 0px 8px #131317,
+        12px 12px 24px #75787c,-12px -12px 24px #ffffff;
+    }
+    .icon{
+        font-size: 44px;
+    }
+    .circle-small{
+        left: 50px;
+        top: 170px;
+        width: 240px;
+        height: 240px;
+    }
+    .circle-big{
+        top: 890px;
+        left: -50px;
+        width: 370px;
+        height: 370px;
+    }
+    .circle-big2{
+        top: 870px;
+        left: 130px;
+        width: 220px;
+        height: 220px;
+    }
+    .circle-big3{
+        top: 300px;
+        left: 500px;
+        width: 200px;
+        height: 200px;
+    }
+    .about-me{
+        top: -290px;
+        left: 230px;
+        font-size: 78px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -250px;
+        left: 45px;
+        width: 730px;
+        font-size: 32px;
+    }
+    .executing{
+        top: -202px;
+        left: 45px;
+        width: 730px;
+        font-size: 32px;
+    }
+    .free-time{
+        left: 45px;
+        top: -156px;
+        width: 730px;
+        font-size: 32px;
+    }
+    .access{
+        font-size: 34px;
+    }
+}
+
+
+
+@media screen and (min-width: 912px){
+    body{
+        width: 912px;  
+        height: 1368px;
+        position: fixed;
+    }
+    .press{
+        top: 55px;left: 55px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 8px #a5a0a0,0px 0px 0px 10px #131317,
+        15px 15px 30px #75787c,-15px -15px 30px #ffffff;
+    }
+    .icon{
+        font-size: 54px;
+    }
+    .circle-small{
+        left: 60px;
+        top: 210px;
+        width: 300px;
+        height: 300px;
+    }
+    .circle-big{
+        top: 1040px;
+        left: -50px;
+        width: 440px;
+        height: 440px;
+    }
+    .circle-big2{
+        top: 1010px;
+        left: 160px;
+        width: 260px;
+        height: 260px;
+    }
+    .circle-big3{
+        top: 350px;
+        left: 560px;
+        width: 240px;
+        height: 240px;
+    }
+    .about-me{
+        top: -340px;
+        left: 260px;
+        font-size: 86px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -295px;
+        left: 55px;
+        width: 800px;
+        line-height: 54px;
+        font-size: 36px;
+    }
+    .executing{
+        top: -235px;
+        left: 55px;
+        width: 800px;
+        line-height: 54px;
+        font-size: 36px;
+    }
+    .free-time{
+        left: 55px;
+        top: -168px;
+        width: 800px;
+        line-height: 54px;
+        font-size: 36px;
+    }
+    .access{
+        font-size: 38px;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    body{
+        width: 1024px;  
+        height: 600px;
+        position: fixed;
+    }
+    .press{
+        top: 40px;left: 40px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 6px #a5a0a0,0px 0px 0px 8px #131317,
+        12px 12px 24px #75787c,-12px -12px 24px #ffffff;
+    }
+    .icon{
+        font-size: 46px;
+    }
+    .circle-small{
+        left: 680px;
+        top: -2px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big{
+        top: 340px;
+        left: -50px;
+        width: 340px;
+        height: 340px;
+    }
+    .circle-big2{
+        top: 450px;
+        left: 190px;
+        width: 180px;
+        height: 180px;
+    }
+    .circle-big3{
+        top: 100px;
+        left: 600px;
+        width: 1px;
+        height: 1px;
+    }
+    .about-me{
+        top: -150px;
+        left: 260px;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -135px;
+        left: 150px;
+        width: 490px;
+        line-height: 34px;
+        font-size: 22px;
+    }
+    .executing{
+        top: -105px;
+        left: 290px;
+        width: 480px;
+        line-height: 34px;
+        font-size: 22px;
+    }
+    .free-time{
+        left: 415px;
+        top: -76px;
+        width: 540px;
+        line-height: 34px;
+        font-size: 22px;
+    }
+    .access{
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) and (min-height: 1366px){
+    body{
+        width: 1024px;  
+        height: 1366px;
+        position: fixed;
+    }
+    .press{
+        top: 60px;left: 60px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 8px #a5a0a0,0px 0px 0px 10px #131317,
+        15px 15px 30px #75787c,-15px -15px 30px #ffffff;
+    }
+    .icon{
+        font-size: 54px;
+    }
+    .circle-small{
+        left: 60px;
+        top: 210px;
+        width: 300px;
+        height: 300px;
+    }
+    .circle-big{
+        top: 1040px;
+        left: -50px;
+        width: 460px;
+        height: 460px;
+    }
+    .circle-big2{
+        top: 1010px;
+        left: 180px;
+        width: 260px;
+        height: 260px;
+    }
+    .circle-big3{
+        top: 400px;
+        left: 650px;
+        width: 240px;
+        height: 240px;
+    }
+    .about-me{
+        top: -350px;
+        left: 290px;
+        font-size: 98px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -315px;
+        left: 70px;
+        width: 885px;
+        line-height: 60px;
+        font-size: 38px;
+    }
+    .executing{
+        top: -265px;
+        left: 70px;
+        width: 885px;
+        line-height: 60px;
+        font-size: 38px;
+    }
+    .free-time{
+        left: 70px;
+        top: -206px;
+        width: 885px;
+        line-height: 60px;
+        font-size: 38px;
+    }
+    .access{
+        font-size: 30px;
+        font-size: 40px;
+    }
+}
+
+
+
+@media screen and (min-width: 1280px){
+    body{
+        width: 1280px;  
+        height: 720px;
+        position: fixed;
+    }
+    .press{
+        top: 20px;left: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 3px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 34px;
+    }
+    .circle-small{
+        left: 820px;
+        top: -2px;
+        width: 260px;
+        height: 260px;
+    }
+    .circle-big{
+        top: 280px;
+        left: -60px;
+        width: 450;
+        height: 450px;
+    }
+    .circle-big2{
+        top: 440px;
+        left: 320px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big3{
+        display: none;
+    }
+    .about-me{
+        top: -180px;
+        left: 380px;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -160px;
+        left: 180px;
+        width: 600px;
+        font-size: 26px;
+    }
+    .executing{
+        top: -120px;
+        left: 430px;
+        width: 600px;
+        font-size: 26px;
+    }
+    .free-time{
+        left: 590px;
+        top: -80px;
+        width: 600px;
+        font-size: 26px;
+    }
+    .access{
+        font-weight: 700;
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (min-width: 1280px) and (min-height: 800px){
+    body{
+        width: 1280px;  
+        height: 800px;
+        position: fixed;
+    }
+    .press{
+        top: 30px;left: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 3px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 34px;
+    }
+    .circle-small{
+        left: 820px;
+        top: -2px;
+        width: 280px;
+        height: 280px;
+    }
+    .circle-big{
+        top: 440px;
+        left: -60px;
+        width: 450px;
+        height: 450px;
+    }
+    .circle-big2{
+        top: 590px;
+        left: 260px;
+        width: 240px;
+        height: 240px;
+    }
+    .circle-big3{
+        display: none;
+    }
+    .about-me{
+        top: -180px;
+        left: 310px;
+        font-size: 68px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -160px;
+        left: 140px;
+        width: 650px;
+        line-height: 44px;
+        font-size: 28px;
+    }
+    .executing{
+        top: -112px;
+        left: 400px;
+        width: 650px;
+        line-height: 44px;
+        font-size: 28px;
+    }
+    .free-time{
+        left: 560px;
+        top: -70px;
+        width: 650px;
+        line-height: 44px;
+        font-size: 28px;
+    }
+    .access{
+        font-weight: 700;
+        font-size: 30px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1360px){
+    body{
+        width: 1360px;  
+        height: 768px;
+        position: fixed;
+    }
+    .press{
+        top: 25px;left: 25px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 3px #a5a0a0,0px 0px 0px 6px #131317,
+        9px 9px 18px #75787c,-9px -9px 18px #ffffff;
+    }
+    .icon{
+        font-size: 34px;
+    }
+    .circle-small{
+        left: 820px;
+        top: -2px;
+        width: 260px;
+        height: 260px;
+    }
+    .circle-big{
+        top: 320px;
+        left: -60px;
+        width: 450;
+        height: 450px;
+    }
+    .circle-big2{
+        top: 480px;
+        left: 320px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle-big3{
+        display: none;
+    }
+    .about-me{
+        top: -170px;
+        left: 350px;
+        font-size: 54px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -150px;
+        left: 160px;
+        width: 620px;
+        line-height: 38px;
+        font-size: 27px;
+    }
+    .executing{
+        top: -120px;
+        left: 430px;
+        width: 600px;
+        line-height: 38px;
+        font-size: 27px;
+    }
+    .free-time{
+        left: 590px;
+        top: -80px;
+        width: 670px;
+        line-height: 38px;
+        font-size: 27px;
+    }
+    .access{
+        font-weight: 700;
+        font-size: 29px;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1440px){
+    body{
+        width: 1440px;  
+        height: 900px;
+        position: fixed;
+    }
+    .press{
+        top: 30px;left: 30px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px #a5a0a0,0px 0px 0px 7px #131317,
+        11px 11px 21px #75787c,-11px -11px 21px #ffffff;
+    }
+    .icon{
+        font-size: 36px;
+    }
+    .circle-small{
+        left: 880px;
+        top: -2px;
+        width: 290px;
+        height: 290px;
+    }
+    .circle-big{
+        top: 390px;
+        left: -60px;
+        width: 500px;
+        height: 500px;
+    }
+    .circle-big2{
+        top: 600px;
+        left: 350px;
+        width: 224px;
+        height: 224px;
+    }
+    .circle-big3{
+        display: none;
+    }
+    .about-me{
+        top: -190px;
+        left: 350px;
+        font-size: 68px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -170px;
+        left: 160px;
+        width: 680px;
+        line-height: 48px;
+        font-size: 30px;
+    }
+    .executing{
+        top: -140px;
+        left: 470px;
+        width: 680px;
+        line-height: 48px;
+        font-size: 30px;
+    }
+    .free-time{
+        left: 640px;
+        top: -110px;
+        width: 690px;
+        line-height: 48px;
+        font-size: 30px;
+    }
+    .access{
+        font-weight: 700;
+        font-size: 32px;
+    }
+}
+
+
+@media screen and (min-width: 1600px){
+    body{
+        width: 1600px;  
+        height: 900px;
+        position: fixed;
+    }
+    .press{
+        top: 30px;left: 30px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px #a5a0a0,0px 0px 0px 7px #131317,
+        11px 11px 21px #75787c,-11px -11px 21px #ffffff;
+    }
+    .icon{
+        font-size: 36px;
+    }
+    .circle-small{
+        left: 980px;
+        top: -2px;
+        width: 300px;
+        height: 300px;
+    }
+    .circle-big{
+        top: 390px;
+        left: -60px;
+        width: 500px;
+        height: 500px;
+    }
+    .circle-big2{
+        top: 600px;
+        left: 350px;
+        width: 240px;
+        height: 240px;
+    }
+    .circle-big3{
+        display: none;
+    }
+    .about-me{
+        top: -200px;
+        left: 380px;
+        font-size: 70px;
+        font-weight: 700;
+    }
+    .front-end{
+        top: -180px;
+        left: 180px;
+        width: 740px;
+        font-size: 31px;
+    }
+    .executing{
+        top: -150px;
+        left: 510px;
+        width: 750px;
+        font-size: 31px;
+    }
+    .free-time{
+        left: 680px;
+        top: -120px;
+        width: 780px;
+        font-size: 31px;
+    }
+    .access{
+        font-weight: 700;
+        font-size: 33px;
+    }
+}

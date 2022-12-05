@@ -1,0 +1,4692 @@
+/*Responsive for all screens*/
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Courgette&family=Heebo:wght@600&family=Josefin+Sans:wght@300;600;700&family=Kalam&family=Karla:wght@700&family=Kaushan+Script&family=Merriweather+Sans:wght@800&family=Montserrat:wght@500;600&family=Nunito:wght@300;400;500;600;700;800;900&family=Odibee+Sans&family=Raleway:wght@700;900&family=Roboto:wght@300;400;500;700;900&family=Russo+One&family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    --body-color: #d5deef;
+    --sidebar-color: #b6c6e1;
+    --primary-color: #2c394b;
+    --primary-color-light: #d5deef;    
+    --toggle-color: white;
+    --text-color: #082032;
+    --bodytext-color: #0a0d25;
+    --article-color: #02314d;
+
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body.dark{
+    --body-color: #000000;
+    --sidebar-color: #202121;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #ffffff;
+    --text-color: #f3f8ff;
+    --article-color: #656b79;
+}
+
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body{
+    height: 850px;
+    width: 280px;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+ .sidebar{
+    position: fixed;
+    top: 130px;
+    width: 170px;
+    height: 340px;
+    padding: 2px 3px;
+    transition: var(--tran-05);
+    z-index: 1;  
+    background: var(--sidebar-color);
+}
+.sidebar.close{
+    width: 32px;
+    position: fixed;
+}
+.sidebar li{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    height: 24px;
+    list-style: none;
+}
+.sidebar .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25px;
+    height: 100%;
+    font-size: 11px;
+    font-weight: 300;
+}
+.text,.icon{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+.text{
+    font-size: 11px;
+    font-weight: 500;
+}
+.close .text{
+    opacity: 0;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 17px; right: -14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transform: translateY(-50%) rotate(180deg);
+    transition: var(--tran-05);
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+}
+body.dark.toggle{
+    color: var(--text-color);
+}
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+.sidebar .menu{
+    margin-top: 26px;
+}
+.search-box{
+    border-radius: 3px;
+    cursor: pointer;
+    transition: var(--tran-05);
+    background-color: var(--primary-color-light);
+}
+.search-box .input{
+    width: 100%; height: 100%;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding: 5px 0px 0px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: var(--tran-05);
+    color: var(--text-color);
+    background-color: var(--primary-color-light);
+}
+.searchicon{
+    padding: 2px 0px 0px 5px;
+    font-size: 16px;
+    font-weight: 900;
+}
+.sidebar li a{
+    display: flex;
+    align-items: center;
+    width: 100%; height: 100%;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+.sidebar li a:hover{
+    background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+    color: var(--text-color);
+}
+.sidebar .menu-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 5px);
+    overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar{
+    display: none;
+}
+.sidebar .menu-bar .mode{
+    position: relative;
+    border-radius: 3px;
+    transition: var(--tran-05);
+    background-color: var(--primary-color-light);
+}
+.sun-moon{
+    width: 44px; height: 24px;
+}
+.mode .sun-moon i{
+    position: absolute;
+}
+.mode .sun-moon i.sun{
+    opacity: 0;
+}
+body.dark .mode .sun-moon i.sun{
+    opacity: 1;
+}
+body.dark .mode .sun-moon i.moon{
+    opacity: 0;
+}
+.menu-bar .bottom-content .toggle-switch{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 27px;
+    cursor: pointer;
+}
+.toggle-switch .switch{
+    position: relative;
+    width: 20px; height: 10px;
+    border-radius: 10px;
+    transition: var(--tran-05);
+    background-color: var(--toggle-color);
+}
+.switch::before{
+    content: '';
+    position: absolute;
+    top: 50%; left: 3px;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: var(--tran-04);
+    background-color: var(--sidebar-color);
+}
+.mode-text{
+    margin: 0px 0px 0px -13px;
+}
+.nav-text{
+    margin: 0px 0px 0px 6px;
+}
+body.dark .switch::before{
+    left: 10px;
+}
+
+.intro{
+    position: absolute;
+    left: 10px;top: 0px;
+    transition: var(--tran-05);
+}
+.intro .name-intro{
+    padding: 30px 6px 0px 0px;
+    font-size: 32px;
+    line-height: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--bodytext-color);
+}
+
+.logo{
+    position: absolute;
+    left: 46px;top: 174px;
+    transition: var(--tran-05);
+}
+.logo-image{
+    background: url("myimg1.jpeg");
+    padding: 26px 0px 0px 26px;
+    width: 175px; height: 175px;
+    margin: 20px 0px 0px 16px;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 0px 0px 5px #0a0d25,0px 0px 0px 7.5px #c9d5eb,
+    12px 12px 23px #2c394b, -12px -12px 23px #e3e8f1;
+}
+.about-me{
+    position: absolute;
+    top: 415px; left: 60px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--bodytext-color);
+}
+.about-article{
+    position: absolute;
+    top: 460px; left: 40px;
+    text-align: center;
+    width: 230px;
+    line-height: 29px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--article-color);    
+}
+.line{
+    position: absolute;
+    top: 680px; left: 10px;
+    width: 260px; height: 1px;
+    background-color: var(--bodytext-color);
+}
+.front-end{
+    font-weight: 700;
+    color: var(--bodytext-color);
+}
+.media{
+    position: absolute;
+    top: 675px; left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 240px; height: 50px;
+    padding-top: 20px;
+}
+.media-icon{
+    font-size: 34px;
+    color: var(--bodytext-color);
+}
+.dark .text{
+    color: var(--text-color);
+}
+.dark .name-intro{
+    color: var(--text-color);
+}
+.dark .about-me{
+    color: var(--text-color);
+}
+.dark .front-end{
+    color: var(--text-color);
+}
+.dark .line{
+    background-color: var(--text-color);
+}
+.dark .media-icon{
+    color: var(--text-color);
+}
+.dark .about-article{
+    color: var(--article-color);
+}
+.dark .logo-image {
+    background-color: #000000;
+    box-shadow: 0px 0px 5px #8a93ab,0px 0px 0px 7.5px #000000,
+    12px 12px 23px #3a3b3c,-12px -12px 23px #1a1b1b;
+}
+
+@media screen and (min-width:320px){
+    body{
+        height: 785px;
+        width: 320px;
+    }
+     .sidebar{
+        height: 290px;
+        top: 85px;
+        width: 170px;
+        padding: 2px 3px;
+     }
+     .sidebar.close{
+        width: 32px;
+    }
+    .sidebar li{
+        margin-top: 3px;
+        height: 23px;
+    }
+    .sidebar .icon{
+        min-width: 25.5px;
+        font-size: 11px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 10px;
+        font-weight: 500;
+        margin-top: 2px;
+    }
+    .sidebar .menu{
+        margin-top: 30px;
+    }
+    .search-box .input{
+        font-size: 12px;
+        font-weight: 700;
+        padding: 5px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 5px;
+        font-size: 15px;
+        font-weight: 900;
+    }
+    .sidebar header .toggle{
+        top: 17px; right: -14px;
+        width: 30px; height: 19px;
+        font-size: 17px;
+    }
+    .toggle-switch .switch{
+        width: 19px; height: 10px;
+        border-radius: 10px;
+        top: 0px;
+    }
+    .switch::before{
+        width: 6px; height: 6px;
+        left: 2.5px;
+    }
+    body.dark .switch::before{
+        left: 10px;
+    }
+    .sun-moon{
+        width: 44px; height: 22px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -18px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 1px;
+    }
+    .intro .name-intro{
+        padding: 22px 10px 0px 0px;
+        font-size: 37px;
+        line-height: 60px;
+    }
+    .logo{
+        left: 52px;top: 165px;
+    }
+    .logo-image{
+        width: 200px; height: 200px;
+        box-shadow: 0px 0px 6.5px #0a0d25,0px 0px 0px 8.5px #c9d5eb,
+    13px 13px 26px #2c394b, -13px -13px 26px #e3e8f1;
+    }
+    .about-me{
+        top: 430px; left: 72px;
+        font-size: 26px;
+    }
+    .about-article{
+        top: 475px; left: 45px;
+        width: 260px;
+        line-height: 30px;
+        font-size: 17px;
+    }
+    .line{
+        top: 690px; left: 10px;
+        width: 300px; height: 1px;
+    }
+    .media{
+        top: 685px; left: 35px;
+        width: 250px; height: 50px;
+    }
+    .media-icon{
+        font-size: 32px;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 6.5px #8a93ab,0px 0px 0px 8.5px #000000,
+        13px 13px 26px #3a3b3c,-13px -13px 26px #1a1b1b;
+    }
+}
+
+@media screen and (min-width:320px) and (min-height:533px){
+    body{
+        height: 855px;
+        width: 320px;
+    }
+     .sidebar{
+        height: 300px;
+        top: 110px;
+        width: 160px;
+        padding: 2px 3px;
+     }
+     .sidebar.close{
+        width: 32px;
+    }
+    .sidebar li{
+        margin-top: 3px;
+        height: 24px;
+    }
+    .sidebar .icon{
+        min-width: 26px;
+        font-size: 11px;
+        font-weight: 300;
+    }
+    .sidebar .menu{
+        margin-top: 28px;
+    }
+    .text{
+        font-size: 10px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .search-box .input{
+        font-size: 12px;
+        font-weight: 700;
+        padding: 5px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 5px;
+        font-size: 15px;
+        font-weight: 900;
+    }
+    .sidebar header .toggle{
+        width: 30px; height: 19px;
+        font-size: 18px;
+        top: 16px; right: -14px;
+    }
+    .toggle-switch .switch{
+        width: 19px; height: 10.5px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .sun-moon{
+        width: 44px; height: 22px;
+    }
+    body.dark .switch::before{
+        left: 10px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -17px;
+    }
+    .nav-text{
+        margin: 1px 0px 0px 2px;
+    }
+    .intro .name-intro{
+        padding: 25px 6px 0px 0px;
+        font-size: 35px;
+        line-height: 60px;
+    }
+    .logo{
+        left: 52px;top: 172px;
+    }
+    .logo-image{
+        width: 205px; height: 205px;
+        box-shadow: 0px 0px 6.5px #0a0d25,0px 0px 0px 8.5px #c9d5eb,
+        13px 13px 26px #2c394b, -13px -13px 26px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 6.5px #6e7074,0px 0px 0px 8.5px #000000,
+        13px 13px 26px #3a3b3c,-13px -13px 26px #1a1b1b;
+    }
+    .about-me{
+        top: 448px; left: 68px;
+        font-size: 27px;
+    }
+    .about-article{
+        top: 495px; left: 40px;
+        width: 272px;
+        line-height: 32px;
+        font-size: 18px;
+    }
+    .line{
+        top: 740px; left: 12px;
+        width: 296px; height: 1px;
+    }
+    .media{
+        top: 735px; left: 35px;
+        width: 250px; height: 50px;
+    }
+    .media-icon{
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width:320px) and (min-height:568px){
+    body{
+        height: 856px;
+        width: 320px;
+    }
+     .sidebar{
+        height: 326px;
+        top: 115px;
+        width: 170px;
+        padding: 2px 3px;
+     }
+     .sidebar.close{
+        width: 32px;
+    }
+    .sidebar li{
+        margin-top: 4px;
+        height: 24px;
+    }
+    .sidebar .icon{
+        min-width: 25px;
+        font-size: 11px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 11px;
+        margin-top: 2px;
+        font-weight: 600;
+    }
+    .search-box .input{
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 5px;
+        font-size: 15px;
+        font-weight: 900;
+    }
+    .sidebar header .toggle{
+        width: 30px; height: 20px;
+        font-size: 18px;
+        right: -15px;top: 17px;
+    }
+    .toggle-switch .switch{
+        width: 20px; height: 12px;
+        border-radius: 10px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 7px; height: 7px;
+        left: 3px;
+    }
+    .sun-moon{
+        width: 44px; height: 21px;
+    }
+    body.dark .switch::before{
+        left: 10.5px;
+    }
+    .toggle-switch .switch{
+        width: 20px; height: 10px;
+    }
+    .switch::before{
+        left: 3.5px;
+        width: 6.5px; height: 6.5px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -16px;
+    }
+    .nav-text{
+        margin: -1px 0px 0px 2px;
+    }
+    .intro .name-intro{
+        padding: 28px 10px 0px 0px;
+        font-size: 37px;
+        line-height: 64px;
+    }
+    .logo{
+        left: 50px;top: 175px;
+    }
+    .logo-image{
+        width: 210px; height: 210px;
+        box-shadow: 0px 0px 8px #0a0d25,0px 0px 0px 10px #c9d5eb,
+        15px 15px 30px #2c394b, -15px -15px 30px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 8px #6e7074,0px 0px 0px 10px #000000,
+        15px 15px 30px #3a3b3c,-15px -15px 30px #1a1b1b;
+    }
+    .about-me{
+        top: 454px; left: 68px;
+        font-size: 27px;
+    }
+    .about-article{
+        top: 500px; left: 40px;
+        width: 272px;
+        line-height: 31px;
+        font-size: 18px;
+    }
+    .line{
+        top: 740px; left: 10px;
+        width: 300px; height: 1px;
+    }
+    .media{
+        top: 735px; left: 30px;
+        width: 260px; height: 50px;
+    }
+    .media-icon{
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width:320px) and (min-height:658px){
+    body{
+        height: 945px;
+        width: 320px;
+    }
+     .sidebar{
+        height: 330px;
+        top: 150px;
+        width: 175px;
+        padding: 2px 3px;
+     }
+     .sidebar.close{
+        width: 32px;
+    }
+    .sidebar li{
+        margin-top: 5px;
+        height: 24px;
+    }
+    .sidebar .icon{
+        font-size: 11px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 10px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .search-box .input{
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 5px;
+        font-size: 15px;
+        font-weight: 900;
+    }
+    .sidebar .menu{
+        margin-top: 31px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 6px);
+    }
+    .sidebar header .toggle{
+        width: 32px; height: 21px;
+        font-size: 19px;top: 18px;
+    }
+    .toggle-switch .switch{
+        width: 20px; height: 10px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .sun-moon{
+        width: 44px; height: 21px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -16px;
+    }
+    .nav-text{
+        margin: 1px 0px 0px 2px;
+    }
+    .intro .name-intro{
+        padding: 30px 12px 0px 0px;
+        font-size: 36px;
+        line-height: 64px;
+    }
+    .logo{
+        left: 48px;top: 184px;
+    }
+    .logo-image{
+        width: 210px; height: 210px;
+        box-shadow: 0px 0px 8px #0a0d25,0px 0px 0px 10px #c9d5eb,
+        15px 15px 30px #2c394b, -15px -15px 30px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 8px #6e7074,0px 0px 0px 10px #000000,
+        15px 15px 30px #3a3b3c,-15px -15px 30px #1a1b1b;
+    }
+    .about-me{
+        top: 470px; left: 66px;
+        font-size: 28px;
+    }
+    .about-article{
+        top: 515px; left: 40px;
+        width: 272px;
+        line-height: 34px;
+        font-size: 18px;
+    }
+    .line{
+        top: 780px; left: 10px;
+        width: 300px; height: 1px;
+    }
+    .media{
+        top: 780px; left: 30px;
+        width: 260px; height: 50px;
+    }
+    .media-icon{
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width:353px){
+    body{
+        height: 1070px; 
+        width: 353px;
+    }
+     .sidebar{
+        height: 380px;
+        top: 160px;
+        width: 200px;
+        padding: 2px 3px;
+    }
+    .sidebar.close{
+        width: 38px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 28px;
+    }
+    .sidebar .icon{
+        min-width: 31px;
+        font-size: 13px;
+    }
+    .text{
+        font-size: 12px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 20px;
+        width: 38px; height: 24px;
+        font-size: 22px;right: -17px;
+    }
+    .sidebar .menu{
+        margin-top: 34px;
+    }
+    .search-box .input{
+        font-size: 15px;
+        font-weight: 700;
+        padding: 5px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 18px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 6px);
+    }
+    .sun-moon{
+        width: 44px; height: 25px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -11.5px;
+    }
+    .nav-text{
+        margin: 4px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 33px;
+    }
+    .toggle-switch .switch{
+        width: 24px; height: 12px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 8px; height: 8px;
+        left: 4px;
+    }
+    body.dark .switch::before{
+        left: 12px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 30px 10px 0px 0px;
+        font-size: 40px;
+        line-height: 76px;
+    }
+    
+    .logo{
+        left: 58px;top: 214px;
+    }
+    .logo-image{
+        width: 230px; height: 230px;
+        box-shadow: 0px 0px 9px #0a0d25,0px 0px 0px 11px #c9d5eb,
+        17px 17px 33px #2c394b, -17px -17px 33px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 9px #6e7074,0px 0px 0px 11px #000000,
+        17px 17px 33px #3a3b3c,-17px -17px 33px #1a1b1b;
+    }
+    .about-me{
+        top: 524px; left: 76px;
+        font-size: 30px;
+    }
+    .about-article{
+        top: 576px; left: 42px;
+        width: 306px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+    .line{
+        top: 880px; left: 15px;
+        width: 324px;
+    }
+    .media{
+        top: 880px; left: 37px;
+        width: 280px; 
+    }
+    .media-icon{
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width:360px){
+    body{
+        height: 990px; 
+        width: 360px;
+    }
+     .sidebar{
+        height: 350px;
+        top: 120px;
+        width: 200px;
+        padding: 2px 3px;
+    }
+    .sidebar.close{
+        width: 36px;  
+    }
+    .sidebar li{
+        margin-top: 5px;
+        height: 26px;
+    }
+    .sidebar .icon{
+        min-width: 30px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 12px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 18px;
+        width: 36px; height: 22px;
+        font-size: 20px;
+    }
+    .sidebar .menu{
+        margin-top: 30px;
+    }
+    .search-box .input{
+        font-size: 15px;
+        font-weight: 700;
+        padding: 5px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 6px;
+        font-size: 18px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 6px);
+    }
+    .sun-moon{
+        width: 44px; height: 23px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -13px;
+    }
+    .nav-text{
+        margin: 1px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 31px;
+    }
+    .toggle-switch .switch{
+        width: 23px; height: 12px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 8px; height: 8px;
+    }
+    body.dark .switch::before{
+        left: 11px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 28px 6px 0px 0px;
+        line-height: 76px;
+        font-size: 40px;
+    }
+    
+    .logo{
+        left: 58px;top: 208px;
+    }
+    .logo-image{
+        width: 235px; height: 235px;
+        box-shadow: 0px 0px 9px #0a0d25,0px 0px 0px 11px #c9d5eb,
+        17px 17px 33px #2c394b, -17px -17px 33px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 9px #6e7074,0px 0px 0px 11px #000000,
+        17px 17px 33px #3a3b3c,-17px -17px 33px #1a1b1b;
+    }
+    .about-me{
+        top: 520px; left: 70px;
+        font-size: 32px;
+    }
+    .about-article{
+        top: 570px; left: 42px;
+        width: 306px;
+        line-height: 36px;
+        font-size: 19px;
+    }
+    .line{
+        top: 830px; left: 15px;
+        width: 324px;
+    }
+    .media{
+        top: 830px; left: 30px;
+        width: 300px;
+    }
+    .media-icon{
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width:360px) and (min-height:740px){
+    body{
+        height: 1065px; 
+        width: 360px;
+    }
+     .sidebar{
+        height: 380px;
+        top: 150px;
+        width: 210px;
+        padding: 2px 3px;
+    }
+    .sidebar.close{
+        width: 39px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 29px;
+    }
+    .sidebar .icon{
+        min-width: 33px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 12px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 22px;right: -20px;
+        width: 42px; height: 26px;
+        font-size: 25px;
+    }
+    .sidebar .menu{
+        margin-top: 38px;
+    }
+    .search-box .input{
+        font-size: 15px;
+        font-weight: 700;
+        padding: 5px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 18px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 7px);
+    }
+    .sun-moon{
+        width: 44px; height: 25px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -10px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 35px;
+    }
+    .toggle-switch .switch{
+        width: 25px; height: 13px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+        left: 4px;
+    }
+    body.dark .switch::before{
+        left: 12px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 34px 12px 0px 0px;
+        line-height: 76px;
+        font-size: 42px;
+    }
+    
+    .logo{
+        left: 60px;top: 220px;
+    }
+    .logo-image{
+        width: 235px; height: 235px;
+        box-shadow: 0px 0px 9px #0a0d25,0px 0px 0px 11px #c9d5eb,
+        17px 17px 33px #2c394b, -17px -17px 33px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 9px #6e7074,0px 0px 0px 11px #000000,
+        17px 17px 33px #3a3b3c,-17px -17px 33px #1a1b1b;
+    }
+    .about-me{
+        top: 540px; left: 70px;
+        font-size: 32px;
+    }
+    .about-article{
+        top: 590px; left: 42px;
+        width: 306px;
+        line-height: 37px;
+        font-size: 20px;
+    }
+    .line{
+        top: 870px; left: 15px;
+        width: 324px;
+    }
+    .media{
+        top: 870px; left: 35px;
+        width: 290px;
+    }
+    .media-icon{
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width:375px){
+    body{
+        height: 1075px; 
+        width: 375px;
+    }
+     .sidebar{
+        height: 370px;
+        top: 130px;
+        width: 210px;
+        padding: 2px 3px;
+    }
+    .sidebar.close{
+        width: 40px;
+    }
+    .sidebar li{
+        margin-top: 4px;
+        height: 30px;
+    }
+    .sidebar .icon{
+        min-width: 34px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .text{
+        font-size: 13px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 21px;right: -18px;
+        width: 38px; height: 24px;
+        font-size: 22px;
+    }
+    .sidebar .menu{
+        margin-top: 36px;
+    }
+    .search-box .input{
+        font-size: 16px;
+        font-weight: 700;
+        padding: 6px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 7px);
+    }
+    .sun-moon{
+        width: 44px; height: 26px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -8px;
+    }
+    .nav-text{
+        margin: 4px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 35px;
+    }
+    .toggle-switch .switch{
+        width: 26px; height: 13px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+        left: 4px;
+    }
+    body.dark .switch::before{
+        left: 13px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 30px 12px 0px 0px;
+        font-size: 44px;
+        line-height: 80px;
+    }
+    
+    .logo{
+        left: 64px;top: 222px;
+    }
+    .logo-image{
+        width: 244px; height: 244px;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #c9d5eb,
+        18px 18px 36px #2c394b, -18px -18px 36px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #6e7074,0px 0px 0px 12px #000000,
+        18px 18px 36px #3a3b3c,-18px -18px 36px #1a1b1b;
+    }
+    .about-me{
+        top: 554px; left: 80px;
+        font-size: 32px;
+    }
+    .about-article{
+        top: 616px; left: 50px;
+        width: 315px;
+        line-height: 40px;
+        font-size: 21px;
+    }
+    .line{
+        top: 920px; left: 15px;
+        width: 344px;
+    }
+    .media{
+        top: 920px; left: 44px;
+        width: 290px; 
+    }
+    .media-icon{
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width:375px) and (min-height: 812px){
+    body{
+        height: 1160px; 
+        width: 375px;
+    }
+     .sidebar{
+        height: 410px;
+        top: 174px;
+        width: 210px;
+        padding: 2px 3px;
+    }
+    .sidebar.close{
+        width: 40px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 31px;
+    }
+    .sidebar .icon{
+        min-width: 34px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 13px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 21px;
+        width: 40px; height: 25px;
+        font-size: 23px;right: -18px;
+    }
+    .sidebar .menu{
+        margin-top: 35px;
+    }
+    .search-box .input{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 6px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 7px);
+    }
+    .sun-moon{
+        width: 44px; height: 28px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -9px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 34px;
+    }
+    .toggle-switch .switch{
+        width: 26px; height: 13px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+    }
+    body.dark .switch::before{
+        left: 13px;
+    }
+    
+    .intro{
+        left: 10px;
+    }
+    .intro .name-intro{
+        padding: 40px 10px 0px 0px;
+        line-height: 84px;
+        font-size: 43px;
+    }
+    
+    .logo{
+        left: 66px;top: 250px;
+    }
+    .logo-image{
+        width: 244px; height: 244px;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #c9d5eb,
+        18px 18px 36px #2c394b, -18px -18px 36px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #6e7074,0px 0px 0px 12px #000000,
+        18px 18px 36px #3a3b3c,-18px -18px 36px #1a1b1b;
+    }
+    .about-me{
+        top: 586px; left: 76px;
+        font-size: 33px;
+    }
+    .about-article{
+        top: 642px; left: 50px;
+        width: 315px;
+        line-height: 40px;
+        font-size: 21px;
+    }
+    .line{
+        top: 950px; left: 15px;
+        width: 344px;
+    }
+    .media{
+        top: 955px; left: 30px;
+        width: 320px; 
+    }
+    .media-icon{
+        font-size: 46px;
+    }
+}
+
+@media screen and (min-width:384px){
+    body{
+        height: 1080px; 
+        width: 384px;
+    }
+     .sidebar{
+        height: 360px;
+        top: 130px;
+        width: 210px;
+        padding: 2px 3px;
+    }
+    .sidebar.close{
+        width: 37px;   
+    }
+    .sidebar li{
+        margin-top: 4px;
+        height: 28px;
+    }
+    .sidebar .icon{
+        min-width: 31px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 11px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 20px;right: -18px;
+        width: 38px; height: 24px;
+        font-size: 22px;
+    }
+    .sidebar .menu{
+        margin-top: 36px;
+    }
+    .search-box .input{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 4px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 6px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 7px);
+    }
+    .sun-moon{
+        width: 44px; height: 27px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -12px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 31.5px;
+    }
+    .toggle-switch .switch{
+        width: 24px; height: 12.5px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 8px; height: 8px;
+    }
+    body.dark .switch::before{
+        left: 12px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 30px 6px 0px 0px;
+        line-height: 84px;
+        font-size: 43px;
+    }
+    
+    .logo{
+        left: 62px;top: 234px;
+    }
+    .logo-image{
+        width: 250px; height: 250px;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #c9d5eb,
+        18px 18px 36px #2c394b, -18px -18px 36px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #6e7074,0px 0px 0px 12px #000000,
+        18px 18px 36px #3a3b3c,-18px -18px 36px #1a1b1b;
+    }
+    .about-me{
+        top: 570px; left: 78px;
+        font-size: 33px;
+    }
+    .about-article{
+        top: 628px; left: 44px;
+        width: 330px;
+        line-height: 42px;
+        font-size: 22px;
+    }
+    .line{
+        top: 940px; left: 15px;
+        width: 352px;
+    }
+    .media{
+        top: 942px; left: 34px;
+        width: 320px; 
+    }
+    .media-icon{
+        font-size: 44px;
+    }
+}
+
+@media screen and (min-width:390px){
+    body{
+        height: 1180px; 
+        width: 390px;
+    }
+     .sidebar{
+        height: 430px;
+        top: 180px;
+        width: 220px;
+        padding: 3px 4px;
+    }
+    .sidebar.close{
+        width: 42px;
+    }
+    .sidebar li{
+        margin-top: 7px;
+        height: 32px;
+    }
+    .sidebar .icon{
+        min-width: 33px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 13px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 23px; right: -20px;
+        width: 42px; height: 27px;
+        font-size: 25px;
+    }
+    .sidebar .menu{
+        margin-top: 38px;
+    }
+    .search-box .input{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 6px 0px 0px 6px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 7px);
+    }
+    .sun-moon{
+        width: 44px; height: 29px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -9px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 35px;
+    }
+    .toggle-switch .switch{
+        width: 26px; height: 13px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 8px; height: 8px;
+    }
+    body.dark .switch::before{
+        left: 14px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 80px;
+        font-size: 44px;
+    }
+    
+    .logo{
+        left: 64px;top: 235px;
+    }
+    .logo-image{
+        width: 250px; height: 250px;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #c9d5eb,
+        18px 18px 36px #2c394b, -18px -18px 36px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #6e7074,0px 0px 0px 12px #000000,
+        18px 18px 36px #3a3b3c,-18px -18px 36px #1a1b1b;
+    }
+    .about-me{
+        top: 575px; left: 80px;
+        font-size: 34px;
+    }
+    .about-article{
+        top: 635px; left: 50px;
+        width: 330px;
+        line-height: 40px;
+        font-size: 21px;
+    }
+    .line{
+        top: 960px; left: 15px;
+        width: 356px;
+    }
+    .media{
+        top: 964px; left: 35px;
+        width: 320px; 
+    }
+    .media-icon{
+        font-size: 44px;
+    }
+}
+
+@media screen and (min-width:393px){
+    body{
+        height: 1165px; 
+        width: 393px;
+    }
+     .sidebar{
+        height: 410px;
+        top: 165px;
+        width: 220px;
+        padding: 2px 4px;
+    }
+    .sidebar.close{
+        width: 42px;
+    }
+    .sidebar li{
+        margin-top: 7px;
+        height: 30px;
+    }
+    .sidebar .icon{
+        min-width: 34px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 14px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 22px; right: -20px;
+        width: 42px; height: 26px;
+        font-size: 24px;
+    }
+    .sidebar .menu{
+        margin-top: 38px;
+    }
+    .search-box input{
+        font-size: 14px;
+    }
+    .search-box .input{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 6px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 27px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -8px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 34px;
+    }
+    .toggle-switch .switch{
+        width: 26px; height: 14px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+    }
+    body.dark .switch::before{
+        left: 13px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 86px;
+        font-size: 45px;
+    }
+    
+    .logo{
+        left: 68px;top: 250px;
+    }
+    .logo-image{
+        width: 250px; height: 250px;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #c9d5eb,
+        18px 18px 36px #2c394b, -18px -18px 36px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #6e7074,0px 0px 0px 12px #000000,
+        18px 18px 36px #3a3b3c,-18px -18px 36px #1a1b1b;
+    }
+    .about-me{
+        top: 590px; left: 82px;
+        font-size: 34px;
+    }
+    .about-article{
+        top: 655px; left: 50px;
+        width: 330px;
+        line-height: 40px;
+        font-size: 22px;
+    }
+    .line{
+        top: 970px; left: 15px;
+        width: 356px;
+    }
+    .media{
+        top: 975px; left: 36px;
+        width: 320px; 
+    }
+    .media-icon{
+        font-size: 44px;
+    }
+}
+
+@media screen and (min-width:393px) and (min-height: 851px){
+    body{
+        height: 1215px; 
+        width: 393px;
+    }
+     .sidebar{
+        height: 440px;
+        top: 190px;
+        width: 230px;
+        padding: 2px 3px;
+    }
+    .sidebar.close{
+        width: 44px;
+    }
+    .sidebar li{
+        margin-top: 4px;
+        height: 36px;
+    }
+    .sidebar .icon{
+        min-width: 38px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 14px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 25px; right: -20px;
+        width: 44px; height: 28px;
+        font-size: 26px;
+    }
+    .sidebar .menu{
+        margin-top: 42px;
+    }
+    .search-box .input{
+        font-size: 19px;
+        font-weight: 700;
+        padding: 6px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 33px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -4px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 38px;
+    }
+    .toggle-switch .switch{
+        width: 28px; height: 14px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+        left: 4px;
+    }
+    body.dark .switch::before{
+        left: 15px;
+    }
+    
+    .intro{
+        left: 8px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 88px;
+        font-size: 46px;
+    }
+    
+    .logo{
+        left: 70px;top: 255px;
+    }
+    .logo-image{
+        width: 250px; height: 250px;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #c9d5eb,
+        18px 18px 36px #2c394b, -18px -18px 36px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #6e7074,0px 0px 0px 12px #000000,
+        18px 18px 36px #3a3b3c,-18px -18px 36px #1a1b1b;
+    }
+    .about-me{
+        top: 600px; left: 80px;
+        font-size: 34px;
+    }
+    .about-article{
+        top: 658px; left: 50px;
+        width: 330px;
+        line-height: 46px;
+        font-size: 22px;
+    }
+    .line{
+        top: 1010px; left: 15px;
+        width: 356px;
+    }
+    .media{
+        top: 1015px; left: 32px;
+        width: 330px; 
+    }
+    .media-icon{
+        font-size: 46px;
+    }
+}
+
+@media screen and (min-width:411px){
+    body{
+        height: 1150px; 
+        width: 411px;
+    }
+     .sidebar{
+        height: 420px;
+        top: 150px;
+        width: 230px;
+        padding: 2px 4px;
+    }
+    .sidebar.close{
+        width: 44px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 32px;
+    }
+    .sidebar .icon{
+        min-width: 36px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 14px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 23px; right: -20px;
+        width: 44px; height: 27px;
+        font-size: 24px;
+    }
+    .sidebar .menu{
+        margin-top: 40px;
+    }
+    .search-box .input{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 6px 0px 0px 9px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 8px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 29px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -6px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 36px;
+    }
+    .toggle-switch .switch{
+        width: 28px; height: 14px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+        left: 4px;
+    }
+    body.dark .switch::before{
+        left: 15px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 30px 6px 0px 0px;
+        line-height: 90px;
+        font-size: 46px;
+    }
+    
+    .logo{
+        left: 72px;top: 252px;
+    }
+    .logo-image{
+        width: 265px; height: 265px;
+        box-shadow: 0px 0px 11px #0a0d25,0px 0px 0px 13px #c9d5eb,
+        20px 20px 39px #2c394b, -20px -20px 39px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 11px #6e7074,0px 0px 0px 13px #000000,
+        20px 20px 39px #3a3b3c,-20px -20px 39px #1a1b1b;
+    }
+    .about-me{
+        top: 610px; left: 80px;
+        font-size: 36px;
+    }
+    .about-article{
+        top: 674px; left: 50px;
+        width: 350px;
+        line-height: 45px;
+        font-size: 23px;
+    }
+    .line{
+        top: 1000px; left: 15px;
+        width: 378px;
+    }
+    .media{
+        top: 1000px; left: 55px;
+        width: 310px; 
+    }
+    .media-icon{
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width:411px) and (min-height: 823px){
+    body{
+        height: 1230px; 
+        width: 411px;
+    }
+     .sidebar{
+        height: 420px;
+        top: 185px;
+        width: 230px;
+        padding: 3px 4px;
+    }
+    .sidebar.close{
+        width: 44px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 32px;
+    }
+    .sidebar .icon{
+        min-width: 35px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .text{
+        font-size: 13px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 24px; right: -20px;
+        width: 44px; height: 27px;
+        font-size: 24px;
+    }
+    .sidebar .menu{
+        margin-top: 38px;
+    }
+    .search-box .input{
+        font-size: 17px;
+        font-weight: 700;
+        padding: 6px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 7px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 29px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -8px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 36px;
+    }
+    .toggle-switch .switch{
+        width: 28px; height: 15px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+    }
+    body.dark .switch::before{
+        left: 14px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 40px 12px 0px 0px;
+        line-height: 90px;
+        font-size: 48px;
+    }
+    
+    .logo{
+        left: 72px;top: 260px;
+    }
+    .logo-image{
+        width: 265px; height: 265px;
+        box-shadow: 0px 0px 11px #0a0d25,0px 0px 0px 13px #c9d5eb,
+        20px 20px 39px #2c394b, -20px -20px 39px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 11px #6e7074,0px 0px 0px 13px #000000,
+        20px 20px 39px #3a3b3c,-20px -20px 39px #1a1b1b;
+    }
+    .about-me{
+        top: 618px; left: 80px;
+        font-size: 36px;
+    }
+    .about-article{
+        top: 680px; left: 50px;
+        width: 350px;
+        line-height: 44px;
+        font-size: 23px;
+    }
+    .line{
+        top: 1030px; left: 15px;
+        width: 378px;
+    }
+    .media{
+        top: 1035px; left: 30px;
+        width: 350px; 
+    }
+    .media-icon{
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width:412px){
+    body{
+        height: 1178px; 
+        width: 412px;
+    }
+     .sidebar{
+        height: 420px;
+        top: 140px;
+        width: 230px;
+        padding: 2px 4px;
+    }
+    .sidebar.close{
+        width: 44px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 33px;
+    }
+    .sidebar .icon{
+        min-width: 36px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 13px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 22px; right: -19px;
+        width: 42px; height: 26px;
+        font-size: 24px;
+    }
+    .sidebar .menu{
+        margin-top: 36px;
+    }
+    .search-box .input{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 6px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 7px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 30px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -6.5px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 36px;
+    }
+    .toggle-switch .switch{
+        width: 28px; height: 14px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+    }
+    body.dark .switch::before{
+        left: 15px;
+    }
+    
+    .intro{
+        left: 8px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 86px;
+        font-size: 48px;
+    }
+    
+    .logo{
+        left: 72px;top: 256px;
+    }
+    .logo-image{
+        width: 265px; height: 265px;
+        box-shadow: 0px 0px 11px #0a0d25,0px 0px 0px 13px #c9d5eb,
+        20px 20px 39px #2c394b, -20px -20px 39px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 11px #6e7074,0px 0px 0px 13px #000000,
+        20px 20px 39px #3a3b3c,-20px -20px 39px #1a1b1b;
+    }
+    .about-me{
+        top: 610px; left: 76px;
+        font-size: 38px;
+    }
+    .about-article{
+        top: 676px; left: 50px;
+        width: 350px;
+        line-height: 44px;
+        font-size: 23px;
+    }
+    .line{
+        top: 1020px; left: 15px;
+        width: 378px;
+    }
+    .media{
+        top: 1025px; left: 37px;
+        width: 340px;
+    }
+    .media-icon{
+        font-size: 46px;
+    }
+}
+
+@media screen and (min-width:412px) and (min-height: 914px){
+    body{
+        height: 1265px; 
+        width: 412px;
+    }
+     .sidebar{
+        height: 450px;
+        top: 210px;
+        width: 240px;
+        padding: 3px 4px;
+    }
+    .sidebar.close{
+        width: 44px;
+    }
+    .sidebar li{
+        margin-top: 8px;
+        height: 32px;
+    }
+    .sidebar .icon{
+        min-width: 36px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 14px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 23px; right: -19px;
+        width: 42px; height: 27px;
+        font-size: 24px;
+    }
+    .sidebar .menu{
+        margin-top: 36px;
+    }
+    .search-box .input{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 5px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 7px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 31px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -6px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 37px;
+    }
+    .toggle-switch .switch{
+        width: 28px; height: 15px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+    }
+    body.dark .switch::before{
+        left: 14px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 90px;
+        font-size: 48px;
+    }
+    
+    .logo{
+        left: 72px;top: 265px;
+    }
+    .logo-image{
+        width: 265px; height: 265px;
+        box-shadow: 0px 0px 11px #0a0d25,0px 0px 0px 13px #c9d5eb,
+        20px 20px 39px #2c394b, -20px -20px 39px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 11px #6e7074,0px 0px 0px 13px #000000,
+        20px 20px 39px #3a3b3c,-20px -20px 39px #1a1b1b;
+    }
+    .about-me{
+        top: 620px; left: 76px;
+        font-size: 38px;
+    }
+    .about-article{
+        top: 685px; left: 50px;
+        width: 350px;
+        line-height: 44px;
+        font-size: 23px;
+    }
+    .line{
+        top: 1030px; left: 15px;
+        width: 378px;
+    }
+    .media{
+        top: 1035px; left: 35px;
+        width: 340px;
+    }
+    .media-icon{
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width:414px){
+    body{
+        height: 1175px; 
+        width: 414px;
+    }
+     .sidebar{
+        height: 430px;
+        top: 150px;
+        width: 230px;
+        padding: 3px 4px;
+    }
+    .sidebar.close{
+        width: 44px;
+    }
+    .sidebar li{
+        margin-top: 7px;
+        height: 32px;
+    }
+    .sidebar .icon{
+        min-width: 35px;
+        font-weight: 300;
+        font-size: 15px;
+    }
+    .text{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 23px; right: -20px;
+        width: 44px; height: 27px;
+        font-size: 25px;
+    }
+    .sidebar .menu{
+        margin-top: 36px;
+    }
+    .search-box .input{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 5px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 7px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 7px);
+    }
+    .sun-moon{
+        width: 44px; height: 29px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -8px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 36px;
+    }
+    .toggle-switch .switch{
+        width: 28px; height: 14px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 9px; height: 9px;
+    }
+    body.dark .switch::before{
+        left: 15px;
+    }
+    
+    .intro{
+        left: 8px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 90px;
+        font-size: 48px;
+    }
+    
+    .logo{
+        left: 72px;top: 260px;
+    }
+    .logo-image{
+        width: 265px; height: 265px;
+        box-shadow: 0px 0px 11px #0a0d25,0px 0px 0px 13px #c9d5eb,
+        20px 20px 39px #2c394b, -20px -20px 39px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 11px #6e7074,0px 0px 0px 13px #000000,
+        20px 20px 39px #3a3b3c,-20px -20px 39px #1a1b1b;
+    }
+    .about-me{
+        top: 615px; left: 82px;
+        font-size: 36px;
+    }
+    .about-article{
+        top: 680px; left: 50px;
+        width: 350px;
+        line-height: 44px;
+        font-size: 23px;
+    }
+    .line{
+        top: 1030px; left: 15px;
+        width: 378px;
+    }
+    .media{
+        top: 1032px; left: 36px;
+        width: 340px;
+    }
+    .media-icon{
+        font-size: 46px;
+    }
+}
+
+@media screen and (min-width:414px) and (min-height: 896px){
+    body{
+        height: 1290px; 
+        width: 414px;
+    }
+     .sidebar{
+        height: 450px;
+        top: 190px;
+        width: 230px;
+        padding: 2px 4px;
+    }
+    .sidebar.close{
+        width: 44px;
+    }
+    .sidebar li{
+        margin-top: 7px;
+        height: 33px;
+    }
+    .sidebar .icon{
+        min-width: 35px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .text{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 24px; right: -22px;
+        width: 46px; height: 29px;
+        font-size: 27px;
+    }
+    .sidebar .menu{
+        margin-top: 42px;
+    }
+    .search-box .input{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 5px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 0px 0px 0px 7px;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 7px);
+    }
+    .sun-moon{
+        width: 44px; height: 32px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -6px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 36px;
+    }
+    .toggle-switch .switch{
+        width: 28px; height: 15px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 10px; height: 10px;
+    }
+    body.dark .switch::before{
+        left: 14px;
+    }
+    
+    .intro{
+        left: 6px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 90px;
+        font-size: 48px;
+    }
+    
+    .logo{
+        left: 73px;top: 270px;
+    }
+    .logo-image{
+        width: 265px; height: 265px;
+        box-shadow: 0px 0px 11px #0a0d25,0px 0px 0px 13px #c9d5eb,
+        20px 20px 39px #2c394b, -20px -20px 39px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 11px #6e7074,0px 0px 0px 13px #000000,
+        20px 20px 39px #3a3b3c,-20px -20px 39px #1a1b1b;
+    }
+    .about-me{
+        top: 630px; left: 75px;
+        font-size: 38px;
+    }
+    .about-article{
+        top: 700px; left: 50px;
+        width: 350px;
+        line-height: 46px;
+        font-size: 23px;
+    }
+    .line{
+        top: 1050px; left: 15px;
+        width: 378px;
+    }
+    .media{
+        top: 1055px; left: 41px;
+        width: 330px;
+    }
+    .media-icon{
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width:480px){
+    body{
+        height: 1380px; 
+        width: 480px;
+    }
+     .sidebar{
+        height: 490px;
+        top: 180px;
+        width: 270px;
+        padding: 3px 4px;
+    }
+    .sidebar.close{
+        width: 54px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height:40px;
+    }
+    .sidebar .icon{
+        min-width: 45px;
+        font-size: 17px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 28px; right: -24px;
+        width: 52px; height: 33px;
+        font-size: 31px;
+    }
+    .sidebar .menu{
+        margin-top: 46px;
+    }
+    .search-box .input{
+        font-size: 24px;
+        font-weight: 700;
+        padding: 5px 0px 0px 7px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 10px;
+        font-size: 28px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 37px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 2.5px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 48px;
+    }
+    .toggle-switch .switch{
+        width: 36px; height: 18px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 12px; height: 12px;
+        left: 5px;
+    }
+    body.dark .switch::before{
+        left: 18px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 104px;
+        font-size: 56px;
+    }
+    
+    .logo{
+        left: 84px;top: 300px;
+    }
+    .logo-image{
+        width: 310px; height: 310px;
+        box-shadow: 0px 0px 14px #0a0d25,0px 0px 0px 16px #c9d5eb,
+        24px 24px 48px #2c394b, -24px -24px 48px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 14px #6e7074,0px 0px 0px 16px #000000,
+        24px 24px 48px #3a3b3c,-24px -24px 48px #1a1b1b;
+    }
+    .about-me{
+        top: 715px; left: 90px;
+        font-size: 43px;
+    }
+    .about-article{
+        top: 790px; left: 58px;
+        width: 410px;
+        line-height: 55px;
+        font-size: 27px;
+    }
+    .line{
+        top: 1210px; left: 15px;
+        width: 450px;
+    }
+    .media{
+        top: 1215px; left: 47px;
+        width: 390px;
+    }
+    .media-icon{
+        font-size: 56px;
+    }
+}
+
+@media screen and (min-width:540px){
+    body{
+        height: 1350px; 
+        width: 540px;
+    }
+     .sidebar{
+        height: 420px;
+        top: 140px;
+        width: 250px;
+        padding: 2px 4px;
+    }
+    .sidebar.close{
+        width: 48px;
+    }
+    .sidebar li{
+        margin-top: 5px;
+        height: 34px;
+    }
+    .sidebar .icon{
+        min-width: 40px;
+        font-weight: 300;
+        font-size: 17px;
+    }
+    .text{
+        font-size: 15px;
+        margin-top: 2px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 25px; right: -22px;
+        width: 48px; height: 29px;
+        font-size: 27px;
+    }
+    .sidebar .menu{
+        margin-top: 42px;
+    }
+    .search-box .input{
+        font-size: 20px;
+        font-weight: 700;
+        padding: 5px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 9px;
+        font-size: 24px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sun-moon{
+        width: 44px; height: 31px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -2px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 40px;
+    }
+    .toggle-switch .switch{
+        width: 30px; height: 16px;
+        border-radius: 18px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 11px; height: 11px;
+    }
+    body.dark .switch::before{
+        left: 14px;
+    }
+    
+    .intro{
+        left: -1px;
+    }
+    .intro .name-intro{
+        padding: 30px 0px 0px 0px;
+        line-height: 100px;
+        font-size: 60px;
+    }
+    
+    .logo{
+        left: 92px;top: 284px;
+    }
+    .logo-image{
+        width: 350px; height: 350px;
+        box-shadow: 0px 0px 15px #0a0d25,0px 0px 0px 17px #c9d5eb,
+        26px 26px 51px #2c394b, -26px -26px 51px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 15px #6e7074,0px 0px 0px 17px #000000,
+        26px 26px 51px #3a3b3c,-26px -26px 51px #1a1b1b;
+    }
+    .about-me{
+        top: 740px; left: 108px;
+        font-size: 46px;
+    }
+    .about-article{
+        top: 820px; left: 54px;
+        width: 474px;
+        line-height: 52px;
+        font-size: 30px;
+    }
+    .line{
+        top: 1200px; left: 18px;
+        width: 503px;
+    }
+    .media{
+        top: 1205px; left: 60px;
+        width: 420px;
+    }
+    .media-icon{
+        font-size: 54px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    body{
+        height: 1620px; 
+        width: 600px;
+    }
+     .sidebar{
+        height: 550px;
+        top: 190px;
+        width: 320px;
+        padding: 2px 5px;
+    }
+    .sidebar.close{
+        width: 58px;
+    }
+    .sidebar li{
+        margin-top: 7px;
+        height: 42px;
+    }
+    .sidebar .icon{
+        min-width: 48px;
+        font-weight: 300;
+        font-size: 19px;
+    }
+    .text{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 28px; right: -26px;
+        width: 58px; height: 34px;
+        font-size: 32px;
+    }
+    .sidebar .menu{
+        margin-top: 48px;
+    }
+    .search-box .input{
+        font-size: 26px;
+        font-weight: 700;
+        padding: 5px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 10px;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 12px);
+    }
+    .sun-moon{
+        width: 44px; height: 40px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 5px;
+    }
+    .nav-text{
+        margin: 4px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 48px;
+    }
+    .toggle-switch .switch{
+        width: 36px; height: 18px;
+        border-radius: 12px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 12px; height: 12px;
+        left: 5px;
+    }
+    body.dark .switch::before{
+        left: 19px;
+    }
+    
+    .intro{
+        left: 8px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 126px;
+        font-size: 68px;
+    }
+    
+    .logo{
+        left: 106px;top: 348px;
+    }
+    .logo-image{
+        width: 390px; height: 390px;
+        box-shadow: 0px 0px 17px #0a0d25,0px 0px 0px 19px #c9d5eb,
+        28px 28px 56px #2c394b, -28px -28px 56px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 17px #6e7074,0px 0px 0px 19px #000000,
+        28px 28px 56px #3a3b3c,-28px -28px 56px #1a1b1b;
+    }
+    .about-me{
+        top: 850px; left: 110px;
+        font-size: 54px;
+    }
+    .about-article{
+        top: 945px; left: 65px;
+        width: 520px;
+        line-height: 62px;
+        font-size: 34px;
+    }
+    .line{
+        top: 1420px; left: 20px;
+        width: 560px;
+    }
+    .media{
+        top: 1430px; left: 60px;
+        width: 480px;
+    }
+    .media-icon{
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 600px) and (min-height: 1024px){
+    body{
+        height: 1650px; 
+        width: 600px;
+    }
+     .sidebar{
+        height: 560px;
+        top: 210px;
+        width: 320px;
+        padding: 2px 5px;
+    }
+    .sidebar.close{
+        width: 58px;
+    }
+    .sidebar li{
+        margin-top: 7px;
+        height: 42px;
+    }
+    .sidebar .icon{
+        min-width: 47px;
+        font-weight: 300;
+        font-size: 19px;
+    }
+    .text{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 30px; right: -27px;
+        width: 58px; height: 36px;
+        font-size: 34px;
+    }
+    .sidebar .menu{
+        margin-top: 54px;
+    }
+    .search-box .input{
+        font-size: 26px;
+        font-weight: 700;
+        padding: 5px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 10px;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 12px);
+    }
+    .sun-moon{
+        width: 44px; height: 40px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 5px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 48px;
+    }
+    .toggle-switch .switch{
+        width: 38px; height: 19px;
+        border-radius: 12px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 12px; height: 12px;
+        left: 6px;
+    }
+    body.dark .switch::before{
+        left: 20px;
+    }
+    
+    .intro{
+        left: 12px;
+    }
+    .intro .name-intro{
+        padding: 40px 6px 0px 0px;
+        line-height: 130px;
+        font-size: 68px;
+    }
+    
+    .logo{
+        left: 106px;top: 356px;
+    }
+    .logo-image{
+        width: 390px; height: 390px;
+        box-shadow: 0px 0px 17px #0a0d25,0px 0px 0px 19px #c9d5eb,
+        28px 28px 56px #2c394b, -28px -28px 56px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 17px #6e7074,0px 0px 0px 19px #000000,
+        28px 28px 56px #3a3b3c,-28px -28px 56px #1a1b1b;
+    }
+    .about-me{
+        top: 860px; left: 120px;
+        font-size: 52px;
+    }
+    .about-article{
+        top: 950px; left: 65px;
+        width: 520px;
+        line-height: 60px;
+        font-size: 34px;
+    }
+    .line{
+        top: 1420px; left: 20px;
+        width: 560px;
+    }
+    .media{
+        top: 1435px; left: 60px;
+        width: 480px;
+    }
+    .media-icon{
+        font-size: 66px;
+    }
+}
+
+@media screen and (min-width: 640px){
+    body{
+        height: 360px;
+    }
+    .sidebar{
+        top: 0px;
+        width: 120px;
+        height: 360px;
+        padding: 2px 4px;
+        
+    }
+    .sidebar.close{
+        width: 35px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 24px;
+    }
+    .sidebar .icon{
+        min-width: 28px;
+        height: 100%;
+        font-size: 9px;
+    }
+    .text{
+        font-size: 8px;
+    }
+    .sidebar header .toggle{
+        top: 16px; right: -8px;
+        width: 16px; height: 16px;
+        font-size: 14px;
+    }
+    .sidebar .menu{
+        margin-top: 24px;
+    }
+    .search-box{
+        border-radius: 2px;
+    }
+    .search-box .input{
+        font-size: 11px;
+        font-weight: 700;
+        padding: 6px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 6px;
+        font-size: 16px;
+        font-weight: 900;
+    }
+    .sidebar li a{
+        border-radius: 2px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 8px);
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 2px;
+    }
+    .sun-moon{
+        width: 44px; height: 24px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -16px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 0px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 28px;
+    }
+    .toggle-switch .switch{
+        width: 20px; height: 10px;
+        border-radius: 20px;
+    }
+    .switch::before{
+        top: 50%; left: 3px;
+        width: 7px; height: 7px;
+    }
+    body.dark .switch::before{
+        left: 10px;
+    }
+    
+    .intro{
+        left: 80px;top: -15px;
+    }
+    .intro .name-intro{
+        padding: 0px 0px 24px 0px;
+        font-size: 45px;
+        width: 500px;height: 60px;
+    }
+    .logo{
+        top: -20px;
+        left: 20px;
+    }
+    .logo-image{
+        width: 200px; height: 225px;
+        margin: 110px 0px 0px 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 7px #0a0d25,0px 0px 0px 9px #c9d5eb,
+        14px 14px 27px #2c394b, -14px -14px 27px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 7px #6e7074,0px 0px 0px 9px #000000,
+        14px 14px 27px #3a3b3c,-14px -14px 27px #1a1b1b;
+    }
+    .about-me{
+        width: 280px;
+        top: 94px; left: 305px;
+        font-size: 24px;
+    }
+    .about-article{
+        top: 130px; left: 305px;
+        width: 310px;
+        line-height: 26px;
+        font-size: 15px;
+        text-align: justify;
+    }
+    .line{
+        position: relative;
+        top: 275px; left: 280px;
+        width: 340px; height: 1px;
+    }
+    .front-end{
+        font-weight: 700;
+    }
+    .media{
+        position: relative;
+        top: 275px;left: 280px;
+        width: 340px; height: 70px;
+    }
+    .media-icon{
+        font-size: 42px;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 4px #8a93ab,0px 0px 0px 10px #000000,
+        16px 16px 30px #3a3b3c,-16px -16px 30px #1a1b1b;
+    }
+}
+
+@media screen and (min-width: 712px){
+    body{
+        height: 1935px; 
+        width: 712px;
+    }
+     .sidebar{
+        height: 650px;
+        top: 220px;
+        width: 370px;
+        padding: 4px 6px;
+    }
+    .sidebar.close{
+        width: 68px;
+    }
+    .sidebar li{
+        margin-top: 11px;
+        height: 48px;
+    }
+    .sidebar .icon{
+        min-width: 54px;
+        font-size: 22px;
+        font-weight: 300;
+    }
+    .text{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 34px; right: -31px;
+        width: 68px; height: 42px;
+        font-size: 40px;
+    }
+    .sidebar .menu{
+        margin-top: 58px;
+    }
+    .search-box .input{
+        font-size: 30px;
+        font-weight: 700;
+        padding: 6px 0px 0px 10px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 12px;
+        font-size: 32px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 11px);
+    }
+    .sun-moon{
+        width: 44px; height: 47px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 11px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 56px;
+    }
+    .toggle-switch .switch{
+        width: 42px; height: 21px;
+        border-radius: 12px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 13px; height: 13px;
+        left: 6px;
+    }
+    body.dark .switch::before{
+        left: 23px;
+    }
+    
+    .intro{
+        left: 60px;
+    }
+    .intro .name-intro{
+        padding: 60px 6px 0px 0px;
+        line-height: 145px;
+        font-size: 82px;
+        width: 600px;
+    }
+    
+    .logo{
+        left: 96px;top: 320px;
+    }
+    .logo-image{
+        width: 470px; height: 470px;
+        box-shadow: 0px 0px 20px #0a0d25,0px 0px 0px 22px #c9d5eb,
+        33px 33px 66px #2c394b, -33px -33px 66px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 20px #6e7074,0px 0px 0px 22px #000000,
+        33px 33px 66px #3a3b3c,-33px -33px 66px #1a1b1b;
+    }
+    .about-me{
+        top: 1020px; left: 140px;
+        font-size: 62px;
+        width: 550px;
+    }
+    .about-article{
+        top: 1130px; left: 78px;
+        width: 610px;
+        text-align: center;
+        line-height: 72px;
+        font-size: 39px;
+    }
+    .line{
+        top: 1690px; left: 24px;
+        width: 664px;
+    }
+    .media{
+        top: 1705px; left: 56px;
+        width: 600px;
+    }
+    .media-icon{
+        font-size: 78px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    body{
+        height: 1915px; 
+        width: 768px;
+    }
+     .sidebar{
+        height: 620px;
+        top: 180px;
+        width: 360px;
+        padding: 4px 6px;
+    }
+    .sidebar.close{
+        width: 68px;
+    }
+    .sidebar li{
+        margin-top: 9px;
+        height: 48px;
+    }
+    .sidebar .icon{
+        min-width: 56px;
+        font-weight: 300;
+        font-size: 22px;
+    }
+    .text{
+        font-size: 21px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 32px; right: -30px;
+        width: 66px; height: 40px;
+        font-size: 40px;
+    }
+    .sidebar .menu{
+        margin-top: 54px;
+    }
+    .search-box .input{
+        font-size: 30px;
+        font-weight: 700;
+        padding: 6px 0px 0px 10px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 12px;
+        font-size: 34px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 12px);
+    }
+    .sun-moon{
+        width: 44px; height: 46px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 13px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 56px;
+    }
+    .toggle-switch .switch{
+        width: 42px; height: 21px;
+        border-radius: 12px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 14px; height: 14px;
+        left: 6px;
+    }
+    body.dark .switch::before{
+        left: 22px;
+    }
+    
+    .intro{
+        left: 35px;
+    }
+    .intro .name-intro{
+        padding: 50px 6px 0px 0px;
+        line-height: 150px;
+        width: 700px;
+        font-size: 88px;
+    }
+    
+    .logo{
+        left: 106px;top: 310px;
+    }
+    .logo-image{
+        width: 500px; height: 500px;
+        box-shadow: 0px 0px 22px #0a0d25,0px 0px 0px 24px #c9d5eb,
+        36px 36px 72px #2c394b, -36px -36px 72px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 22px #6e7074,0px 0px 0px 24px #000000,
+        36px 36px 72px #3a3b3c,-36px -36px 72px #1a1b1b;
+    }
+    .about-me{
+        top: 1045px; left: 150px;
+        font-size: 66px;
+    }
+    .about-article{
+        top: 1156px; left: 74px;
+        width: 680px;
+        line-height: 74px;
+        font-size: 43px;
+    }
+    .line{
+        top: 1710px; left: 24px;
+        width: 710px;
+    }
+    .media{
+        top: 1720px; left: 86px;
+        width: 600px;
+    }
+    .media-icon{
+        font-size: 78px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    body{
+        height: 2120px; 
+        width: 800px;
+    }
+     .sidebar{
+        height: 720px;
+        top: 250px;
+        width: 410px;
+        padding: 4px 6px;
+    }
+    .sidebar.close{
+        width: 76px;
+    }
+    .sidebar li{
+        margin-top: 8px;
+        height: 56px;
+        border-radius: 6px;
+    }
+    .sidebar .icon{
+        min-width: 64px;
+        font-size: 26px;
+    }
+    .text{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 38px; right: -37px;
+        width: 78px; height: 48px;
+        font-size: 46px;
+    }
+    .sidebar .menu{
+        margin-top: 68px;
+    }
+    .search-box .input{
+        font-size: 32px;
+        font-weight: 700;
+        padding: 8px 0px 0px 11px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 14px;
+        font-size: 38px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 6px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 6px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 14px);
+    }
+    .sun-moon{
+        width: 44px; height: 52px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 20px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 66px;
+    }
+    .toggle-switch .switch{
+        width: 48px; height: 24px;
+        border-radius: 12px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 16px; height: 16px;
+        left: 7px;
+    }
+    body.dark .switch::before{
+        left: 25px;
+    }
+    
+    .intro{
+        left: 50px;
+    }
+    .intro .name-intro{
+        padding: 60px 6px 0px 0px;
+        line-height: 166px;
+        width: 700px;
+        font-size: 90px;
+    }
+    
+    .logo{
+        left: 105px;top: 360px;
+    }
+    .logo-image{
+        width: 535px; height: 535px;
+        box-shadow: 0px 0px 25px #0a0d25,0px 0px 0px 27px #c9d5eb,
+        41px 41px 81px #2c394b, -41px -41px 81px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 25px #6e7074,0px 0px 0px 27px #000000,
+        41px 41px 81px #3a3b3c,-41px -41px 81px #1a1b1b;
+    }
+    .about-me{
+        top: 1146px; left: 160px;
+        font-size: 68px;
+    }
+    .about-article{
+        top: 1264px; left: 90px;
+        width: 690px;
+        line-height: 76px;
+        font-size: 44px;
+    }
+    .line{
+        top: 1840px; left: 24px;
+        width: 750px;height: 1.5px;
+    }
+    .media{
+        top: 1850px; left: 80px;
+        width: 640px;
+    }
+    .media-icon{
+        font-size: 88px;
+    }
+}
+
+@media screen and (min-width: 820px){
+    body{
+        height: 2115px; 
+        width: 820px;
+    }
+     .sidebar{
+        height: 700px;
+        top: 230px;
+        width: 400px;
+        padding: 4px 6px;
+    }
+    .sidebar.close{
+        width: 74px;
+    }
+    .sidebar li{
+        margin-top: 7px;
+        height: 56px;
+    }
+    .sidebar .icon{
+        min-width: 60px;
+        font-size: 24px;
+    }
+    .text{
+        font-size: 23px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 38px; right: -36px;
+        width: 76px; height: 46px;
+        font-size: 42px;
+    }
+    .sidebar .menu{
+        margin-top: 68px;
+    }
+    .search-box .input{
+        font-size: 32px;
+        font-weight: 700;
+        padding: 9px 0px 0px 11px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 14px;
+        font-size: 38px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 13px);
+    }
+    .sun-moon{
+        width: 44px; height: 52px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 18px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 62px;
+    }
+    .toggle-switch .switch{
+        width: 46px; height: 23px;
+        border-radius: 12px;
+    }
+    .switch::before{
+        width: 15px; height: 15px;
+    }
+    body.dark .switch::before{
+        left: 24px;
+    }
+    
+    .intro{
+        left: 63px;
+    }
+    .intro .name-intro{
+        padding: 64px 6px 0px 0px;
+        line-height: 166px;
+        font-size: 94px;
+    }
+    
+    .logo{
+        left: 118px;top: 376px;
+    }
+    .logo-image{
+        width: 535px; height: 535px;
+        box-shadow: 0px 0px 25px #0a0d25,0px 0px 0px 27px #c9d5eb,
+        41px 41px 81px #2c394b, -41px -41px 81px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 25px #6e7074,0px 0px 0px 27px #000000,
+        41px 41px 81px #3a3b3c,-41px -41px 81px #1a1b1b;
+    }
+    .about-me{
+        top: 1160px; left: 160px;
+        width: 630px;
+        font-size: 72px;
+    }
+    .about-article{
+        top: 1284px; left: 90px;
+        width: 700px;
+        line-height: 80px;
+        font-size: 44px;
+    }
+    .line{
+        top: 1890px; left: 24px;
+        width: 760px;height: 1.5px;
+    }
+    .media{
+        top: 1905px; left: 96px;
+        width: 620px;
+    }
+    .media-icon{
+        font-size: 82px;
+    }
+}
+
+@media screen and (min-width: 912px){
+    body{
+        height: 2450px; 
+        width: 912px;
+    }
+     .sidebar{
+        height: 800px;
+        top: 270px;
+        width: 480px;
+        padding: 4px 6px;
+    }
+    .sidebar.close{
+        width: 86px;
+    }
+    .sidebar li{
+        margin-top: 6px;
+        height: 67px;
+    }
+    .sidebar .icon{
+        min-width: 72px;
+        font-size: 28px;
+    }
+    .text{
+        font-size: 27px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 46px; right: -42px;
+        width: 86px; height: 54px;
+        font-size: 52px;
+    }
+    .sidebar .menu{
+        margin-top: 82px;
+    }
+    .search-box .input{
+        font-size: 38px;
+        font-weight: 700;
+        padding: 9px 0px 0px 11px;
+    }
+    .searchicon{
+        padding: 4px 0px 0px 16px;
+        font-size: 46px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 16px);
+    }
+    .sun-moon{
+        width: 44px; height: 62px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 29px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 76px;
+    }
+    .toggle-switch .switch{
+        width: 54px; height: 27px;
+        border-radius: 50px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 17px; height: 17px;
+        left: 8px;
+    }
+    body.dark .switch::before{
+        left: 28px;
+    }
+    
+    .intro{
+        left: 68px;
+    }
+    .intro .name-intro{
+        padding: 84px 6px 0px 0px;
+        line-height: 186px;
+        width: 780px;
+        font-size: 104px;
+    }
+    
+    .logo{
+        left: 130px;top: 460px;
+    }
+    .logo-image{
+        width: 600px; height: 600px;
+        box-shadow: 0px 0px 29px #0a0d25,0px 0px 0px 31px #c9d5eb,
+        47px 47px 93px #2c394b, -47px -47px 93px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 29px #6e7074,0px 0px 0px 31px #000000,
+        47px 47px 93px #3a3b3c,-47px -47px 93px #1a1b1b;
+    }
+    .about-me{
+        top: 1350px; left: 180px;
+        font-size: 78px;width: 700px;
+    }
+    .about-article{
+        top: 1484px; left: 94px;
+        width: 800px;
+        line-height: 90px;
+        font-size: 51px;
+    }
+    .line{
+        top: 2180px; left: 24px;
+        width: 860px;height: 1.5px;
+    }
+    .media{
+        top: 2200px; left: 94px;
+        width: 720px;
+    }
+    .media-icon{
+        font-size: 94px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    body{
+        height: 600px;
+    }
+    .sidebar{
+        top: 0px;
+        width: 190px;
+        height: 600px;
+        padding: 4px 6px;
+    }
+    .sidebar.close{
+        width: 55px;
+    }
+    .sidebar li{
+        margin-top: 9px;
+        height: 38px;
+    }
+    .sidebar .icon{
+        min-width: 42px;
+        height: 100%;
+        font-size: 14px;
+    }
+    .text{
+        font-size: 13px;
+    }
+    .sidebar header .toggle{
+        top: 24px; right: -12px;
+        width: 26px; height: 26px;
+        font-size: 24px;
+    }
+    .sidebar .menu{
+        margin-top: 34px;
+    }
+    .search-box{
+        border-radius: 3px;
+    }
+    .search-box .input{
+        font-size: 16px;
+        font-weight: 700;
+        padding: 9px 0px 0px 8px;
+    }
+    .searchicon{
+        padding: 2px 0px 0px 10px;
+        font-size: 24px;
+        font-weight: 900;
+    }
+    .sidebar li a{
+        border-radius: 3px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 14px);
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sun-moon{
+        width: 44px; height: 37px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px -5px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px -2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 44px;
+    }
+    .toggle-switch .switch{
+        width: 32px; height: 16px;
+        border-radius: 20px;
+    }
+    .switch::before{
+        top: 50%; left: 5px;
+        width: 11px; height: 11px;
+    }
+    body.dark .switch::before{
+        left: 16px;
+    }
+    
+    .intro{
+        left: 90px;top: -14px;
+    }
+    .intro .name-intro{
+        padding: 0px 0px 24px 0px;
+        font-size: 72px;
+        width: 870px;height: 100px;
+    }
+    .logo{
+        top: -25px;
+        left: 30px;
+    }
+    .logo-image{
+        width: 340px; height: 380px;
+        margin: 180px 0px 0px 80px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 14px #0a0d25,0px 0px 0px 16px #c9d5eb,
+        24px 24px 48px #2c394b, -24px -24px 48px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 14px #6e7074,0px 0px 0px 16px #000000,
+        24px 24px 48px #3a3b3c,-24px -24px 48px #1a1b1b;
+    }
+    .about-me{
+        width: 410px;
+        top: 160px; left: 510px;
+        font-size: 40px;
+    }
+    .about-article{
+        top: 225px; left: 510px;
+        width: 470px;
+        line-height: 42px;
+        font-size: 24px;
+        text-align: justify;
+    }
+    .line{
+        position: relative;
+        top: 470px; left: 460px;
+        width: 526px; height: 1.5px;
+    }
+    .front-end{
+        font-weight: 700;
+    }
+    .media{
+        position: relative;
+        top: 480px;left: 470px;
+        width: 500px; height: 100px;
+    }
+    .media-icon{
+        font-size: 60px;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 4px #8a93ab,0px 0px 0px 10px #000000,
+        16px 16px 30px #3a3b3c,-16px -16px 30px #1a1b1b;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 1366px){
+    body{
+        height: 2560px; 
+        width: 1024px;
+    }
+     .sidebar{
+        height: 780px;
+        top: 270px;
+        width: 480px;
+        padding: 4px 6px;
+    }
+    .sidebar.close{
+        width: 86px;
+    }
+    .sidebar li{
+        margin-top: 4px;
+        height: 66px;
+        font-weight: 300;
+    }
+    .sidebar .icon{
+        min-width: 72px;
+        font-size: 29px;
+    }
+    .text{
+        font-size: 27px;
+        font-weight: 500;
+    }
+    .sidebar header .toggle{
+        top: 46px; right: -40px;
+        width: 88px; height: 56px;
+        font-size: 54px;
+    }
+    .sidebar .menu{
+        margin-top: 92px;
+    }
+    .search-box .input{
+        font-size: 38px;
+        font-weight: 700;
+        padding: 10px 0px 0px 11px;
+    }
+    .searchicon{
+        padding: 4px 0px 0px 16px;
+        font-size: 46px;
+        font-weight: 900;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 14px);
+    }
+    .sun-moon{
+        width: 44px; height: 62px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 29px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 2px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 76px;
+    }
+    .toggle-switch .switch{
+        width: 56px; height: 28px;
+        border-radius: 30px;
+        top: 1px;
+    }
+    .switch::before{
+        width: 18px; height: 18px;
+        left: 8px;
+    }
+    body.dark .switch::before{
+        left: 30px;
+    }
+    
+    .intro{
+        left: 20px;
+    }
+    .intro .name-intro{
+        width: 980px;
+        padding: 60px 6px 0px 0px;
+        line-height: 200px;
+        font-size: 116px;
+    }
+    
+    .logo{
+        left: 110px;top: 380px;
+    }
+    .logo-image{
+        width: 680px; height: 680px;
+        box-shadow: 0px 0px 33px #0a0d25,0px 0px 0px 35px #c9d5eb,
+        53px 53px 105px #2c394b, -53px -53px 105px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 33px #6e7074,0px 0px 0px 35px #000000,
+        53px 53px 105px #3a3b3c,-53px -53px 105px #1a1b1b;
+    }
+    .about-me{
+        width: 730px;
+        top: 1390px; left: 200px;
+        font-size: 88px;
+    }
+    .about-article{
+        top: 1534px; left: 98px;
+        width: 900px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 57px;
+    }
+    .line{
+        top: 2280px; left: 30px;
+        width: 950px;height: 1.5px;
+    }
+    .media{
+        top: 2300px; left: 120px;
+        width: 780px;
+    }
+    .media-icon{
+        font-size: 102px;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    body{
+        height: 609px;
+    }
+    .sidebar{
+        top: 0px;
+        width: 180px;
+        height: 609px;
+        padding: 6px 8px;
+    }
+    .sidebar.close{
+        width: 60px;
+    }
+    .sidebar li{
+        margin-top: 12px;
+        height: 39px;
+        border-radius: 2px;
+    }
+    .sidebar .icon{
+        min-width: 44px;
+        height: 100%;
+        font-size: 16px;
+    }
+    .text{
+        font-size: 14px;
+    }
+    .sidebar header .toggle{
+        top: 26px; right: -11px;
+        width: 22px; height: 22px;
+        font-size: 20px;
+    }
+    .sidebar .menu{
+        margin-top: 32px;
+    }
+    .search-box .input{
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px 0px 0px 9px;
+    }
+    .searchicon{
+        padding: 4px 0px 0px 9px;
+        font-size: 26px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 15px);
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sun-moon{
+        width: 44px; height: 37px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 1px;
+    }
+    .nav-text{
+        margin: 4px 0px 0px 0px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 44px;
+    }
+    .toggle-switch .switch{
+        width: 32px; height: 16px;
+        border-radius: 22px;
+    }
+    .switch::before{
+        top: 50%; left: 4px;
+        width: 12px; height: 12px;
+    }
+    body.dark .switch::before{
+        left: 16px;
+    }
+    
+    .intro{
+        left: 80px;top: -10px;
+    }
+    .intro .name-intro{
+        padding: 0px 0px 24px 0px;
+        font-size: 80px;
+        width: 1200px;
+    }
+    .sidebar.close ~ .intro{
+        left: 8px;
+    }
+    .logo{
+        top: -0px;
+        left: 150px;
+    }
+    .logo-image{
+        width: 350px; height: 395px;
+        margin: 150px 0px 0px 80px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #d5deef,  /*c9d5eb*/
+        18px 18px 36px #2c394b, -18px -18px 36px #e3e8f1;  /*ebedf3*/
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #6e7074,0px 0px 0px 12px #000000,
+        18px 18px 36px #3a3b3c,-18px -18px 36px #1a1b1b;
+    }
+    .sidebar.close ~ .logo{
+        left: 78px;
+    }
+    .about-me{
+        width: 450px;
+        top: 168px; left: 630px;
+        font-size: 48px;
+    }
+    .about-article{
+        top: 244px; left: 630px;
+        width: 610px;
+        line-height: 48px;
+        font-size: 26px;
+        text-align: justify;
+    }
+    .line{
+        position: relative;
+        top: 470px; left: 590px;
+        width: 650px; height: 2px;
+    }
+    .front-end{
+        font-weight: 700;
+    }
+    .media{
+        position: relative;
+        top: 480px;left: 590px;
+        width: 650px; height: 100px;
+    }
+    .media-icon{
+        font-size: 68px;
+    }
+}
+
+@media screen and (min-width: 1280px) and (min-height: 800px){
+    body{
+        height: 800px;
+    }
+    .sidebar{
+        top: 0px;
+        width: 220px;
+        height: 800px;
+        padding: 6px 8px;
+    }
+    .sidebar.close{
+        width: 72px;
+    }
+    .sidebar li{
+        margin-top: 16px;
+        height: 50px;
+    }
+    .sidebar .icon{
+        min-width: 54px;
+        height: 100%;
+        font-size: 20px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    .sidebar header .toggle{
+        top: 32px; right: -16px;
+        width: 32px; height: 32px;
+        font-size: 26px;
+    }
+    .sidebar .menu{
+        margin-top: 46px;
+    }
+    .search-box{
+        border-radius: 4px;
+    }
+    .search-box .input{
+        font-size: 20px;
+        font-weight: 700;
+        padding: 14px 0px 0px 9px;
+    }
+    .searchicon{
+        padding: 4px 0px 0px 14px;
+        font-size: 32px;
+        font-weight: 900;
+    }
+    .sidebar li a{
+        border-radius: 4px;
+    }
+    .sidebar .menu-bar{
+        height: calc(100% - 16px);
+    }
+    .sidebar .menu-bar .mode{
+        border-radius: 4px;
+    }
+    .sun-moon{
+        width: 44px; height: 46px;
+    }
+    .mode-text{
+        margin: 0px 0px 0px 8px;
+    }
+    .nav-text{
+        margin: 2px 0px 0px 0px;
+    }
+    .menu-bar .bottom-content .toggle-switch{
+        min-width: 58px;
+    }
+    .toggle-switch .switch{
+        width: 42px; height: 21px;
+        border-radius: 22px;
+    }
+    .switch::before{
+        top: 50%; left: 6px;
+        width: 15px; height: 15px;
+    }
+    body.dark .switch::before{
+        left: 20px;
+    }
+    
+    .intro{
+        left: 250px;
+    }
+    .intro .name-intro{
+        padding: 5px 0px 24px 0px;
+        font-size: 84px;
+        width: 1000px;
+    }
+    .sidebar.close ~ .intro{
+        left: 160px;
+    }
+    .logo{
+        top: 50px;
+        left: 210px;
+    }
+    .logo-image{
+        width: 420px; height: 470px;
+        margin: 140px 0px 0px 70px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 13px #0a0d25,0px 0px 0px 15px #c9d5eb,
+        23px 23px 45px #2c394b, -23px -23px 45px #e3e8f1;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 13px #6e7074,0px 0px 0px 15px #000000,
+        23px 23px 45px #3a3b3c,-23px -23px 45px #1a1b1b;
+    }
+    .sidebar.close ~ .logo{
+        left: 140px;
+    }
+    .about-me{
+        width: 430px;
+        top: 165px; left: 780px;
+        font-size: 50px;
+    }
+    .about-article{
+        top: 245px; left: 780px;
+        width: 430px;
+        line-height: 50px;
+        font-size: 30px;
+        text-align: justify;
+    }
+    .line{
+        position: relative;
+        top: 640px; left: 660px;
+        width: 580px; height: 2px;
+    }
+    .front-end{
+        font-weight: 700;
+    }
+    .media{
+        position: relative;
+        top: 655px;left: 660px;
+        width: 580px; height: 100px;
+    }
+    .media-icon{
+        font-size: 76px;
+    }
+    .dark .logo-image {
+        background-color: #000000;
+        box-shadow: 0px 0px 10px #8a93ab,0px 0px 0px 10px #000000,
+        16px 16px 30px #3a3b3c,-16px -16px 30px #1a1b1b;
+    }
+}
+
+@media screen and (min-width:1360px){
+    body{
+        height: 657px;
+    }
+    .sidebar{
+        width: 200px;
+        height: 657px;
+    }
+    .sidebar.close{
+        width: 68px;
+    }
+    .sidebar li{
+        height: 44px;
+    }
+    .sidebar .icon{
+        min-width: 52px;
+        font-size: 18px;
+    }
+    .text{
+        font-size: 14.5px;
+    }
+    .sidebar header .toggle{
+        top: 24px;
+        width: 24px; height: 24px;
+        font-size: 22px;
+        right: -11px;
+    }
+    .sidebar .menu{
+        margin-top: 38px;
+    }
+    .search-box .input{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 12px 0px 0px 9px;
+    }
+    .searchicon{
+        padding: 4px 0px 0px 10px;
+        font-size: 32px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+     height: calc(100% - 14px);
+    }
+    .sun-moon{
+        width: 44px; height: 37px;
+    }
+    .mode .sun-moon i{
+     position: absolute;
+     right: 130px;bottom: 0px;
+     } 
+     .mode-text{
+         margin-left: 7px;
+     }
+     .menu-bar .bottom-content .toggle-switch{
+        min-width: 58px;
+    }
+    .toggle-switch .switch{
+        width: 38px; height: 18px;
+        border-radius: 22px;
+        left: 2.5px;
+    }
+    .switch::before{
+        width: 13px; height: 13px;
+        left: 5px;
+    }
+    body.dark .switch::before{
+        left: 20px;
+    }
+    .intro{
+        left: 90px;
+    }
+    .intro .name-intro{
+        padding: 10px 0px 28px 88px;
+        font-size: 88px;
+        font-weight: 600;
+    }
+    .sidebar.close ~ .intro{
+        left: 20px;
+    }
+    .logo{
+        top: 10px;left: 140px;
+    }
+    .logo-image{
+        width: 370px; height: 420px;
+        margin: 160px 0px 0px 100px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px #0a0d25,0px 0px 0px 12px #c9d5eb,
+        20px 20px 39px #2c394b, -20px -20px 39px #e3e8f1;
+    }
+    .dark .logo-image {
+        box-shadow: 0px 0px 10px #8a93ab,0px 0px 0px 12px #000000,
+        20px 20px 39px #3a3b3c,-20px -20px 39px #1a1b1b;
+    }
+    .sidebar.close ~ .logo{
+        left: 78px;
+    }
+    .about-me{
+        width: 450px;
+        top: 174px; left: 654px;
+        font-size: 49px;
+        font-weight: 600;
+    }
+    .about-article{
+        top: 250px; left: 660px;
+        width: 650px;
+        text-align: justify;
+        line-height: 55px;
+        font-size: 28px;
+        font-weight: 500;
+    }
+    .line{
+        position: relative;
+        top: 505px; left: 620px;
+        width: 690px; height: 2px;
+    }
+    .media{
+        position: relative;
+        top: 520px;left: 610px;
+        width: 700px; height: 100px;
+    }
+    .media-icon{
+        font-size: 76px;
+    }
+ }
+
+ @media screen and (min-width:1440px){
+    body{
+        height: 789px;
+    }
+    .sidebar{
+        width: 230px;
+        height: 789px;
+    }
+    .sidebar.close{
+        width: 76px;
+    }
+    .sidebar li{
+        height: 54px;
+    }
+    .sidebar .icon{
+        min-width: 60px;
+        font-size: 20px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    .sidebar header .toggle{
+        top: 28px;
+        width: 27px; height: 27px;
+        font-size: 24px;
+        right: -13px;
+    }
+    .sidebar .menu{
+        margin-top: 40px;
+    }
+    .search-box .input{
+        font-size: 21px;
+        font-weight: 700;
+        padding: 14px 0px 0px 9px;
+    }
+    .searchicon{
+        padding: 4px 0px 0px 12px;
+        font-size: 38px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+     height: calc(100% - 18px);
+    }
+    .sun-moon{
+        width: 44px; height: 44px;
+    }
+    .mode .sun-moon i{
+     position: absolute;
+     right: 154px;bottom: 1px;
+     } 
+     .mode-text{
+         margin-bottom: 0px;
+         margin-left: 7px;
+     }
+     .mode-text{
+        margin: 0px 0px 0px 16px;
+    }
+    .nav-text{
+        margin: 3px 0px 0px 0px;
+    }
+     .menu-bar .bottom-content .toggle-switch{
+        min-width: 66px;
+    }
+    .toggle-switch .switch{
+        width: 44px; height: 22px;
+        border-radius: 22px;
+    }
+    .switch::before{
+        width: 17px; height: 17px;
+        left: 5px;
+    }
+    body.dark .switch::before{
+        left: 21px;
+    }
+    .intro{
+        left: 165px;
+    }
+    .intro .name-intro{
+        padding: 20px 0px 28px 88px;
+        font-size: 92px;
+        font-weight: 600;
+    }
+    .sidebar.close ~ .intro{
+        left: 70px;
+    }
+    .logo{
+        top: -30px;left: 200px;
+    }
+    .logo-image{
+        width: 440px; height: 500px;
+        margin: 230px 0px 0px 90px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 13px #0a0d25,0px 0px 0px 15px #c9d5eb,
+        23px 23px 45px #2c394b, -23px -23px 45px #e3e8f1;
+    }
+    .dark .logo-image {
+        box-shadow: 0px 0px 13px #8a93ab,0px 0px 0px 15px #000000,
+        23px 23px 45px #3a3b3c,-23px -23px 45px #1a1b1b;
+    }
+    .sidebar.close ~ .logo{
+        left: 120px;
+    }
+    .about-me{
+        width: 480px;
+        top: 194px; left: 790px;
+        font-size: 54px;
+        font-weight: 600;
+    }
+    .about-article{
+        top: 280px; left: 790px;
+        width: 600px;
+        text-align: justify;
+        line-height: 56px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .line{
+        position: relative;
+        top: 600px; left: 740px;
+        width: 660px; height: 2px;
+    }
+    .media{
+        position: relative;
+        top: 620px;left: 740px;
+        width: 650px; height: 100px;
+    }
+    .media-icon{
+        font-size: 88px;
+    }
+ }
+
+ @media screen and (min-width:1600px){
+    body{
+        height: 789px;
+    }
+    .sidebar{
+        width: 230px;
+        height: 789px;
+    }
+    .sidebar.close{
+        width: 76px;
+    }
+    .sidebar li{
+        height: 54px;
+    }
+    .sidebar .icon{
+        min-width: 60px;
+        font-size: 20px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    .sidebar header .toggle{
+        top: 30px;
+        width: 28px; height: 28px;
+        font-size: 26px;
+        right: -14px;
+    }
+    .sidebar .menu{
+        margin-top: 40px;
+    }
+    .search-box .input{
+        font-size: 21px;
+        font-weight: 700;
+        padding: 14px 0px 0px 9px;
+    }
+    .searchicon{
+        padding: 4px 0px 0px 12px;
+        font-size: 38px;
+        font-weight: 900;
+    }
+    .sidebar .menu-bar{
+     height: calc(100% - 18px);
+    }
+    .sun-moon{
+        width: 44px; height: 44px;
+    }
+    .mode .sun-moon i{
+     position: absolute;
+     right: 155px;bottom: 1px;
+     } 
+     .mode-text{
+         margin-bottom: 0px;
+         margin-left: 15px;
+     }
+     .menu-bar .bottom-content .toggle-switch{
+        min-width: 66px;
+    }
+    .toggle-switch .switch{
+        width: 42px; height: 20px;
+        border-radius: 22px;
+        left: 2.5px;
+    }
+    .switch::before{
+        width: 16px; height: 16px;
+        left: 5px;
+    }
+    body.dark .switch::before{
+        left: 22px;
+    }
+    .intro{
+        left: 200px;
+    }
+    .intro .name-intro{
+        padding: 20px 0px 28px 118px;
+        font-size: 100px;
+        font-weight: 600;
+    }
+    .sidebar.close ~ .intro{
+        left: 130px;
+    }
+    .logo{
+        top: -10px;left: 200px;
+    }
+    .logo-image{
+        width: 450px; height: 520px;
+        margin: 200px 0px 0px 90px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 13px #0a0d25,0px 0px 0px 15px #c9d5eb,
+        23px 23px 45px #2c394b, -23px -23px 45px #e3e8f1;
+    }
+    .dark .logo-image {
+        box-shadow: 0px 0px 13px #8a93ab,0px 0px 0px 15px #000000,
+        23px 23px 45px #3a3b3c,-23px -23px 45px #1a1b1b;
+    }
+    .sidebar.close ~ .logo{
+        left: 125px;
+    }
+    .about-me{
+        width: 480px;
+        top: 208px; left: 800px;
+        font-size: 54px;
+        font-weight: 600;
+    }
+    .about-article{
+        top: 295px; left: 800px;
+        width: 740px;
+        text-align: justify;
+        line-height: 66px;
+        font-size: 32px;
+        font-weight: 500;
+    }
+    .line{
+        position: relative;
+        top: 595px; left: 760px;
+        width: 780px; height: 2px;
+    }
+    .media{
+        position: relative;
+        top: 615px;left: 780px;
+        width: 740px; height: 100px;
+    }
+    .media-icon{
+        font-size: 94px;
+    }
+ }
+

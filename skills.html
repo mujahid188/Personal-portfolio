@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="skills.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div><button class="press"><i class='bx bx-arrow-back icon'></i></button></div>
+    <div class="circle-small"></div>
+    <div class="circle-big"></div>
+    <div class="circle-big2"></div>
+    <div class="circle-big3"></div>
+    
+    <!--   Skills Block   -->
+    <div class="card">
+        <div class="development">DEVELOPMENT</div>
+        <div class="html">HTML5</div>
+        <div class="css">CSS3</div>
+        <div class="js">JAVASCRIPT</div>
+        <div class="d1">REACT JS</div>
+        <div class="d2">---</div>
+        <div class="d3">---</div>
+    </div>
+    <!--   end of Skills block   -->
+
+    <!--   Development Block   -->
+    <div class="card1">
+        <div class="tools">TOOLS</div>
+        <div class="git">GIT</div>
+        <div class="github">GITHUB</div>
+        <div class="vs">VS CODE</div>
+        <div class="t1">---</div>
+        <div class="t2">---</div>
+        <div class="t3">---</div>
+    </div>
+    <!--   end of Development block   -->
+    
+    <script>
+        let btnBack = document.querySelector('button');
+
+        btnBack.addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>
